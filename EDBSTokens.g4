@@ -1,0 +1,72 @@
+lexer grammar EDBSTokens;
+
+PERIOD : '.';
+COLON : ':';
+COMMA : ',';
+PRIMED: '\'';
+APOSTROPHE: ['];
+
+WRITE_KEYWORD : 'SKRIV';
+CALC_KEYWORD : 'REKN';
+REPEAT_KEYWORD :  'GJENTAR';
+CONDITION_KEYWORD : 'MEDAN';
+UPDATE_KEYWORD : 'OPPDATER';
+DEF_MOULE_KEYWORD : 'DEFINER EIT MODUL';
+MODULE_PARAM_KEYWORD : 'MED';
+INPUT_PARAM_KEYWORD : 'INN';
+OUTPUT_PARAM_KEYWORD: 'UT';
+MODULE_BODY_KEYWORD: 'SOM';
+EXIT_MODULE_KEYWORD: 'AVSLUT MODUL.';
+CALL_MODULE_KEYWORD: 'KALL';
+FILE_KEYWORD: 'FIL';
+IN_KEYWORD: 'i';
+READ_KEYWORD : 'LES';
+FINISH_KEYWORD : 'FERDIG.';
+NEXT_KEYWORD : 'NESTE';
+LENGTH_KEYWORD : 'LENGDE';
+OF_KEYWORD : 'AV';
+
+OP_SUB: '–';
+OP_ADD : '+';
+OP_DIV : '/';
+OP_MUL : '*';
+
+COMP_EQL : '=';
+COMP_LT : '<';
+COMP_LEQ : '<=';
+COMP_GT: '>';
+COMP_GEQ: '>=';
+
+OPEN_PAREN : '(';
+CLOSE_PAREN : ')';
+
+SOP_CONCAT: '++';
+SOP_REPEAT: '**';
+SOP_SPLIT: '//';
+SOP_SUBSTR: '--';
+
+BOP_NOT : 'IKKJE';
+BOP_AND : 'OG';
+BOP_OR : 'ELLER';
+
+LOP_NEXT : 'neste';
+LOP_FIND : 'finn';
+LOP_BACK : 'førre';
+LOP_RESET : 'tilbakestill';
+LOP_RESET_IDX : 'til';
+
+NULL_CHAR : '<tom>';
+NEWLINE_CHAR : '<linjeskift>';
+WHITESPACE_CHAR : '<tomrom>';
+
+fragment CHAR : [a-zA-ZåæøÅÆØ];
+fragment CHAR_PLUS : CHAR | '-';
+fragment DIGIT : [0-9];
+
+STRING : '«' (~[»])* '»';
+IDENTIFIER : CHAR CHAR_PLUS* APOSTROPHE*;
+
+NUMBER: '-'? DIGIT+ (',' DIGIT+)?;
+COMMENT : 'OBS!' (~[\r\n])* NEWLINE;
+NEWLINE : '\r'? '\n';
+WHITESPACE : [ \r\n\t]+ -> skip;
