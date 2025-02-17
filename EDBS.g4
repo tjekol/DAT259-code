@@ -8,7 +8,9 @@ statement : def_module_op | fin_stmt PERIOD NEWLINE* | COMMENT NEWLINE*;
 
 fin_stmt : while_stmt | update_stmt | calc_stmt | write_stmt | read_stmt  | calc_stmt | read_file_stmt;
 
-write_stmt : WRITE_KEYWORD (STRING IDENTIFIER)* | WRITE_KEYWORD STRING* IDENTIFIER*;
+write_stmt : WRITE_KEYWORD write_arg+;
+
+write_arg : STRING | IDENTIFIER;
 
 calc_stmt : CALC_KEYWORD IDENTIFIER COLON (expr_op | call_mod_op | str_op | list_op);
 

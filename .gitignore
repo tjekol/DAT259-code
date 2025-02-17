@@ -1,9 +1,11 @@
 # Generated Files
-gen
 parser
 Code.iml
-.DS_Store
 
 # Config
 .idea
 .antlr
+
+#Cache
+.DS_Store
+edbs/__pycache__
