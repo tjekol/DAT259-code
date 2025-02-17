@@ -3,4 +3,4 @@ DAT259 is a special course taken at HVL.
 
 The course delves into the classical theories and practices of compiler construction  while integrating modern tools like ANTLR and LLVM to streamline the development process. The main goal of the course is to empower students to create their own  programming and domain-specific languages based on state-of-the-art tools.
 
-This repository contains code where I create my own syntax and compiler of a made up language called EDBS. 
+This repository contains code where I create my own syntax and compiler for a made up language called EDBS. 
