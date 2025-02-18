@@ -1,0 +1,5 @@
+LES nedbetaling: «Tast inn månadleg innbetaling».
+LES år: «Tast inn tal år».
+REKN totalt-betalt: nedbetaling * 12 * år.
+SKRIV «Sum innbetalingar:» totalt-betalt.
+FERDIG.

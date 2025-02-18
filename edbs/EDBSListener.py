@@ -80,12 +80,102 @@ class EDBSListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by EDBSParser#expr_op.
-    def enterExpr_op(self, ctx:EDBSParser.Expr_opContext):
+    # Enter a parse tree produced by EDBSParser#div.
+    def enterDiv(self, ctx:EDBSParser.DivContext):
         pass
 
-    # Exit a parse tree produced by EDBSParser#expr_op.
-    def exitExpr_op(self, ctx:EDBSParser.Expr_opContext):
+    # Exit a parse tree produced by EDBSParser#div.
+    def exitDiv(self, ctx:EDBSParser.DivContext):
+        pass
+
+
+    # Enter a parse tree produced by EDBSParser#add.
+    def enterAdd(self, ctx:EDBSParser.AddContext):
+        pass
+
+    # Exit a parse tree produced by EDBSParser#add.
+    def exitAdd(self, ctx:EDBSParser.AddContext):
+        pass
+
+
+    # Enter a parse tree produced by EDBSParser#sub.
+    def enterSub(self, ctx:EDBSParser.SubContext):
+        pass
+
+    # Exit a parse tree produced by EDBSParser#sub.
+    def exitSub(self, ctx:EDBSParser.SubContext):
+        pass
+
+
+    # Enter a parse tree produced by EDBSParser#not.
+    def enterNot(self, ctx:EDBSParser.NotContext):
+        pass
+
+    # Exit a parse tree produced by EDBSParser#not.
+    def exitNot(self, ctx:EDBSParser.NotContext):
+        pass
+
+
+    # Enter a parse tree produced by EDBSParser#len.
+    def enterLen(self, ctx:EDBSParser.LenContext):
+        pass
+
+    # Exit a parse tree produced by EDBSParser#len.
+    def exitLen(self, ctx:EDBSParser.LenContext):
+        pass
+
+
+    # Enter a parse tree produced by EDBSParser#null.
+    def enterNull(self, ctx:EDBSParser.NullContext):
+        pass
+
+    # Exit a parse tree produced by EDBSParser#null.
+    def exitNull(self, ctx:EDBSParser.NullContext):
+        pass
+
+
+    # Enter a parse tree produced by EDBSParser#bool.
+    def enterBool(self, ctx:EDBSParser.BoolContext):
+        pass
+
+    # Exit a parse tree produced by EDBSParser#bool.
+    def exitBool(self, ctx:EDBSParser.BoolContext):
+        pass
+
+
+    # Enter a parse tree produced by EDBSParser#mul.
+    def enterMul(self, ctx:EDBSParser.MulContext):
+        pass
+
+    # Exit a parse tree produced by EDBSParser#mul.
+    def exitMul(self, ctx:EDBSParser.MulContext):
+        pass
+
+
+    # Enter a parse tree produced by EDBSParser#lit.
+    def enterLit(self, ctx:EDBSParser.LitContext):
+        pass
+
+    # Exit a parse tree produced by EDBSParser#lit.
+    def exitLit(self, ctx:EDBSParser.LitContext):
+        pass
+
+
+    # Enter a parse tree produced by EDBSParser#var.
+    def enterVar(self, ctx:EDBSParser.VarContext):
+        pass
+
+    # Exit a parse tree produced by EDBSParser#var.
+    def exitVar(self, ctx:EDBSParser.VarContext):
+        pass
+
+
+    # Enter a parse tree produced by EDBSParser#nested.
+    def enterNested(self, ctx:EDBSParser.NestedContext):
+        pass
+
+    # Exit a parse tree produced by EDBSParser#nested.
+    def exitNested(self, ctx:EDBSParser.NestedContext):
         pass
 
 
@@ -152,12 +242,12 @@ class EDBSListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by EDBSParser#read_stmt.
-    def enterRead_stmt(self, ctx:EDBSParser.Read_stmtContext):
+    # Enter a parse tree produced by EDBSParser#read_assgn.
+    def enterRead_assgn(self, ctx:EDBSParser.Read_assgnContext):
         pass
 
-    # Exit a parse tree produced by EDBSParser#read_stmt.
-    def exitRead_stmt(self, ctx:EDBSParser.Read_stmtContext):
+    # Exit a parse tree produced by EDBSParser#read_assgn.
+    def exitRead_assgn(self, ctx:EDBSParser.Read_assgnContext):
         pass
 
 

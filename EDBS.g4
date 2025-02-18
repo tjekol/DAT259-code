@@ -6,19 +6,27 @@ program : statement* FINISH_KEYWORD NEWLINE?;
 
 statement : def_module_op | fin_stmt PERIOD NEWLINE* | COMMENT NEWLINE*;
 
-fin_stmt : while_stmt | update_stmt | calc_stmt | write_stmt | read_stmt  | calc_stmt | read_file_stmt;
+fin_stmt : while_stmt | update_stmt | write_stmt | read_assgn  | calc_stmt | read_file_stmt;
 
 write_stmt : WRITE_KEYWORD write_arg+;
 
 write_arg : STRING | IDENTIFIER;
 
-calc_stmt : CALC_KEYWORD IDENTIFIER COLON (expr_op | call_mod_op | str_op | list_op);
+calc_stmt : CALC_KEYWORD IDENTIFIER COLON (expr_op | call_mod_op | list_op | str_op);
 
 cond_stmt : CONDITION_KEYWORD expr_op cond_stmt expr_op | COMP_EQL | COMP_LT | COMP_LEQ | COMP_GT | COMP_GEQ;
 
 bool_op : BOP_AND | BOP_OR;
 
-expr_op : BOP_NOT expr_op | expr_op bool_op expr_op | expr_op OP_MUL expr_op | expr_op OP_DIV expr_op | expr_op OP_ADD expr_op | expr_op OP_SUB expr_op | len_op | OPEN_PAREN expr_op CLOSE_PAREN | NUMBER | IDENTIFIER | NULL_CHAR;
+expr_op : BOP_NOT expr_op # not
+    | expr_op bool_op expr_op # bool
+    | expr_op OP_MUL expr_op # mul
+    | expr_op OP_DIV expr_op # div
+    | expr_op OP_ADD expr_op # add
+    | expr_op OP_SUB expr_op # sub
+    | len_op # len
+    | OPEN_PAREN expr_op CLOSE_PAREN # nested
+    | NUMBER # lit | IDENTIFIER # var | NULL_CHAR # null;
 
 str_op : str_op SOP_CONCAT str_op | str_op SOP_REPEAT str_op | str_op SOP_SUBSTR str_op | str_op SOP_SPLIT str_op | NULL_CHAR | NEWLINE_CHAR | WHITESPACE_CHAR | IDENTIFIER;
 
@@ -34,6 +42,6 @@ while_stmt : REPEAT_KEYWORD (fin_stmt COMMA?)* NEWLINE? cond_stmt | REPEAT_KEYWO
 
 update_stmt : UPDATE_KEYWORD IDENTIFIER COLON (expr_op | list_op | str_op);
 
-read_stmt : READ_KEYWORD IDENTIFIER COLON STRING;
+read_assgn : READ_KEYWORD IDENTIFIER COLON STRING;
 
 read_file_stmt : READ_KEYWORD FILE_KEYWORD IDENTIFIER;
