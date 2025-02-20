@@ -7,6 +7,7 @@ from edbs.EDBSVisitor import EDBSVisitor
 class SymbolTable:
     def __init__(self):
         self.storage = {}
+        self.modules = {}
 
     # variable from IDENTIFIER
     def add_var(self, name: str, value: float):
@@ -77,6 +78,13 @@ class InterpreterVisitor(EDBSVisitor):
     def visitNull(self, ctx:EDBSParser.NullContext):
         return None
 
+    # def visitWhile_stmt(self, ctx:EDBSParser.While_stmtContext):
+    #     cond_true = self.visit(ctx.cond_stmt())
+    #     while cond_true:
+    #         for c in ctx.children:
+    #             self.visit(c)
+    #             cond_true = self.visit(c)
+
     # expression operations
     def visitMul(self, ctx:EDBSParser.MulContext):
         return self.visit(ctx.getChild(0)) * self.visit(ctx.getChild(2))
@@ -92,6 +100,20 @@ class InterpreterVisitor(EDBSVisitor):
 
     def visitNested(self, ctx:EDBSParser.NestedContext):
         return self.visit(ctx.expr_op())
+
+    # variables & literals
+    def visitStrlit(self, ctx:EDBSParser.StrlitContext):
+        return self.visit(ctx.str_lit())
+
+    def visitStr_lit(self, ctx:EDBSParser.Str_litContext):
+        if ctx.STRING() is not None:
+            return str(ctx.STRING())[1:-1]
+        elif ctx.NEWLINE_CHAR():
+            return '\n'
+        elif ctx.WHITESPACE_CHAR():
+            return ' '
+        elif ctx.NULL_CHAR():
+            return None
 
 def main():
     # input_stream = FileStream("./Example code/hello.edbs", encoding="utf-8")

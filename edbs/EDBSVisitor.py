@@ -19,8 +19,28 @@ class EDBSVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by EDBSParser#fin_stmt.
-    def visitFin_stmt(self, ctx:EDBSParser.Fin_stmtContext):
+    # Visit a parse tree produced by EDBSParser#main_stmt.
+    def visitMain_stmt(self, ctx:EDBSParser.Main_stmtContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by EDBSParser#module_def.
+    def visitModule_def(self, ctx:EDBSParser.Module_defContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by EDBSParser#input_params.
+    def visitInput_params(self, ctx:EDBSParser.Input_paramsContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by EDBSParser#output_params.
+    def visitOutput_params(self, ctx:EDBSParser.Output_paramsContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by EDBSParser#param_list.
+    def visitParam_list(self, ctx:EDBSParser.Param_listContext):
         return self.visitChildren(ctx)
 
 
@@ -39,21 +59,6 @@ class EDBSVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by EDBSParser#cond_stmt.
-    def visitCond_stmt(self, ctx:EDBSParser.Cond_stmtContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by EDBSParser#bool_op.
-    def visitBool_op(self, ctx:EDBSParser.Bool_opContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by EDBSParser#div.
-    def visitDiv(self, ctx:EDBSParser.DivContext):
-        return self.visitChildren(ctx)
-
-
     # Visit a parse tree produced by EDBSParser#add.
     def visitAdd(self, ctx:EDBSParser.AddContext):
         return self.visitChildren(ctx)
@@ -64,8 +69,48 @@ class EDBSVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by EDBSParser#not.
-    def visitNot(self, ctx:EDBSParser.NotContext):
+    # Visit a parse tree produced by EDBSParser#mul.
+    def visitMul(self, ctx:EDBSParser.MulContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by EDBSParser#var.
+    def visitVar(self, ctx:EDBSParser.VarContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by EDBSParser#concat.
+    def visitConcat(self, ctx:EDBSParser.ConcatContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by EDBSParser#nested.
+    def visitNested(self, ctx:EDBSParser.NestedContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by EDBSParser#substr.
+    def visitSubstr(self, ctx:EDBSParser.SubstrContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by EDBSParser#div.
+    def visitDiv(self, ctx:EDBSParser.DivContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by EDBSParser#call_op.
+    def visitCall_op(self, ctx:EDBSParser.Call_opContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by EDBSParser#strlit.
+    def visitStrlit(self, ctx:EDBSParser.StrlitContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by EDBSParser#split.
+    def visitSplit(self, ctx:EDBSParser.SplitContext):
         return self.visitChildren(ctx)
 
 
@@ -79,38 +124,13 @@ class EDBSVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by EDBSParser#bool.
-    def visitBool(self, ctx:EDBSParser.BoolContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by EDBSParser#mul.
-    def visitMul(self, ctx:EDBSParser.MulContext):
-        return self.visitChildren(ctx)
-
-
     # Visit a parse tree produced by EDBSParser#lit.
     def visitLit(self, ctx:EDBSParser.LitContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by EDBSParser#var.
-    def visitVar(self, ctx:EDBSParser.VarContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by EDBSParser#nested.
-    def visitNested(self, ctx:EDBSParser.NestedContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by EDBSParser#str_op.
-    def visitStr_op(self, ctx:EDBSParser.Str_opContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by EDBSParser#len_op.
-    def visitLen_op(self, ctx:EDBSParser.Len_opContext):
+    # Visit a parse tree produced by EDBSParser#repeat.
+    def visitRepeat(self, ctx:EDBSParser.RepeatContext):
         return self.visitChildren(ctx)
 
 
@@ -119,13 +139,43 @@ class EDBSVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by EDBSParser#call_mod_op.
-    def visitCall_mod_op(self, ctx:EDBSParser.Call_mod_opContext):
+    # Visit a parse tree produced by EDBSParser#comp.
+    def visitComp(self, ctx:EDBSParser.CompContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by EDBSParser#def_module_op.
-    def visitDef_module_op(self, ctx:EDBSParser.Def_module_opContext):
+    # Visit a parse tree produced by EDBSParser#not.
+    def visitNot(self, ctx:EDBSParser.NotContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by EDBSParser#or.
+    def visitOr(self, ctx:EDBSParser.OrContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by EDBSParser#and.
+    def visitAnd(self, ctx:EDBSParser.AndContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by EDBSParser#cond.
+    def visitCond(self, ctx:EDBSParser.CondContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by EDBSParser#comparison.
+    def visitComparison(self, ctx:EDBSParser.ComparisonContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by EDBSParser#str_lit.
+    def visitStr_lit(self, ctx:EDBSParser.Str_litContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by EDBSParser#list_command.
+    def visitList_command(self, ctx:EDBSParser.List_commandContext):
         return self.visitChildren(ctx)
 
 
