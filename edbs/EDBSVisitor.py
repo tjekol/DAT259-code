@@ -14,16 +14,6 @@ class EDBSVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by EDBSParser#statement.
-    def visitStatement(self, ctx:EDBSParser.StatementContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by EDBSParser#main_stmt.
-    def visitMain_stmt(self, ctx:EDBSParser.Main_stmtContext):
-        return self.visitChildren(ctx)
-
-
     # Visit a parse tree produced by EDBSParser#module_def.
     def visitModule_def(self, ctx:EDBSParser.Module_defContext):
         return self.visitChildren(ctx)
@@ -39,8 +29,23 @@ class EDBSVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by EDBSParser#module_body.
+    def visitModule_body(self, ctx:EDBSParser.Module_bodyContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by EDBSParser#param_list.
     def visitParam_list(self, ctx:EDBSParser.Param_listContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by EDBSParser#main_stmt.
+    def visitMain_stmt(self, ctx:EDBSParser.Main_stmtContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by EDBSParser#statement.
+    def visitStatement(self, ctx:EDBSParser.StatementContext):
         return self.visitChildren(ctx)
 
 
@@ -119,13 +124,8 @@ class EDBSVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by EDBSParser#null.
-    def visitNull(self, ctx:EDBSParser.NullContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by EDBSParser#lit.
-    def visitLit(self, ctx:EDBSParser.LitContext):
+    # Visit a parse tree produced by EDBSParser#nolit.
+    def visitNolit(self, ctx:EDBSParser.NolitContext):
         return self.visitChildren(ctx)
 
 
@@ -164,13 +164,23 @@ class EDBSVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by EDBSParser#actual_param_list.
+    def visitActual_param_list(self, ctx:EDBSParser.Actual_param_listContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by EDBSParser#actual_param.
+    def visitActual_param(self, ctx:EDBSParser.Actual_paramContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by EDBSParser#comparison.
     def visitComparison(self, ctx:EDBSParser.ComparisonContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by EDBSParser#str_lit.
-    def visitStr_lit(self, ctx:EDBSParser.Str_litContext):
+    # Visit a parse tree produced by EDBSParser#str_literal.
+    def visitStr_literal(self, ctx:EDBSParser.Str_literalContext):
         return self.visitChildren(ctx)
 
 
@@ -184,8 +194,8 @@ class EDBSVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by EDBSParser#update_stmt.
-    def visitUpdate_stmt(self, ctx:EDBSParser.Update_stmtContext):
+    # Visit a parse tree produced by EDBSParser#mutate_stmt.
+    def visitMutate_stmt(self, ctx:EDBSParser.Mutate_stmtContext):
         return self.visitChildren(ctx)
 
 
@@ -196,6 +206,11 @@ class EDBSVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by EDBSParser#read_file_stmt.
     def visitRead_file_stmt(self, ctx:EDBSParser.Read_file_stmtContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by EDBSParser#return.
+    def visitReturn(self, ctx:EDBSParser.ReturnContext):
         return self.visitChildren(ctx)
 
 
