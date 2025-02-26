@@ -1,22 +1,86 @@
 import sys
+from http.cookiejar import cut_port_re
+
 from antlr4 import *
 from edbs.EDBSLexer import EDBSLexer
 from edbs.EDBSParser import EDBSParser
 from edbs.EDBSVisitor import EDBSVisitor
 
+class ExitCall(Exception):
+    pass
+
+class UndefinedVarRef(Exception):
+    def __init__(self, name: str):
+        self.name = name
+
+class VarAlreadyDefined(Exception):
+    def __init__(self, name: str):
+        self.name = name
+
+class Module:
+    def __init__(self, formal_params, result, body):
+        self.formal_params = formal_params
+        self.result = result
+        self.body = result
+
 class SymbolTable:
-    def __init__(self):
+    def __init__(self, next = None):
         self.storage = {}
         self.modules = {}
+        self.next = next
 
     # variable from IDENTIFIER
     def add_var(self, name: str, value: float):
+        if name in self.storage:
+            raise VarAlreadyDefined(name)
         self.storage[name] = value
 
     def get_var(self, name: str):
         if name not in self.storage:
-            raise KeyError(f"{name} not found")
+            if self.next is not None:
+                return self.next.get_var(name)
+            else:
+                UndefinedVarRef(name)
         return self.storage[name]
+
+    def mutate_var(self, name: str, value):
+        if self.next is not None:
+            self.next.mutate_var(name, value)
+        else:
+            self.storage[name] = value
+
+    def is_defined(self, name: str):
+        result = name in self.storage
+        if not result and self.next is not None:
+            return self.next.is_defined(name)
+        return result
+
+class CollectActualParams(EDBSVisitor):
+    def __init__(self, symbol_table):
+        self.symbol_table = symbol_table
+        self.values = []
+
+    def visitActual_param_list(self, ctx:EDBSParser.Actual_param_listContext):
+        for p in ctx.getChildren():
+            self.visit(p)
+
+    def visitActual_param(self, ctx:EDBSParser.Actual_paramContext):
+        if ctx.IDENTIFIER() is not None:
+            self.values.append(self.symbol_table.get_var(str(ctx.IDENTIFIER())))
+        elif ctx.NUMBER():
+            self.values.append(float(str(ctx.NUMBER()).replace(".","").replace(",",".")))
+        else:
+            self.values.append(self.visit(ctx.str_literal()))
+
+    def visitStr_literal(self, ctx:EDBSParser.Str_literalContext):
+        if ctx.STRING() is not None:
+            return str(ctx.STRING())[1:-1]
+        elif ctx.NEWLINE_CHAR():
+            return '\n'
+        elif ctx.WHITESPACE_CHAR():
+            return ' '
+        elif ctx.NULL_CHAR():
+            return None
 
 class InterpreterVisitor(EDBSVisitor):
 
@@ -33,16 +97,20 @@ class InterpreterVisitor(EDBSVisitor):
         if ctx.IDENTIFIER() is not None:
             name = str(ctx.IDENTIFIER())
             value = self.symbol_table.get_var(name)
-            print(str(value), end=' ')
+            if isinstance(value, float):
+                value = str(round(value, 2)).replace(".", ",")
+            if value.endswith(",0"):
+                value = value[:-2]
+            print(str(value), end=" ")
         elif ctx.STRING():
             string_token = ctx.STRING()
-            print(str(string_token)[1:-1], end=' ')
+            print(str(string_token)[1:-1], end=" ")
 
     # LES beløp: «Tast inn lånebeløp».
     def visitRead_assgn(self, ctx:EDBSParser.Read_assgnContext):
         prompt = str(ctx.STRING())[1:-1]
+        value = float(input(f"{prompt}: ").replace(".", "").replace(",", "."))
         name = str(ctx.IDENTIFIER())
-        value = float(input(f"{prompt}: "))
         self.symbol_table.add_var(name, value)
 
     # REKN totalt-betalt: nedbetaling * 12 * år.
@@ -53,21 +121,63 @@ class InterpreterVisitor(EDBSVisitor):
 
     # OPPDATER totalt-avdrag: totalt-avdrag' + avdrag,
     # OPPDATER beløp: ny-beløp,
-    def visitUpdate_stmt(self, ctx:EDBSParser.Update_stmtContext):
-        if ctx.expr_op():
-            name = str(ctx.IDENTIFIER())
-            value = self.visit(ctx.expr_op())
-            self.symbol_table.add_var(name,value)
-        elif ctx.IDENTIFIER():
-            name = str(ctx.IDENTIFIER())
-            value = self.symbol_table.get_var(name)
-            self.symbol_table.add_var(name,value)
+    def visitMutate_stmt(self, ctx:EDBSParser.Mutate_stmtContext):
+        name = str(ctx.IDENTIFIER())
+        if not self.symbol_table.is_defined(name):
+            self.symbol_table.add_var(name, 0.0)
+        value = self.visit(ctx.expr_op())
+        self.symbol_table.mutate_var(name, value)
 
-    # expressions
+    def visitWhile_stmt(self, ctx:EDBSParser.While_stmtContext):
+        is_true = self.visit(ctx.bool_expr())
+        self.symbol_table = SymbolTable(self.symbol_table)
+        while is_true:
+            for c in ctx.children:
+                self.visit(c)
+            is_true = self.visit(ctx.bool_expr())
+        self.symbol_table = self.symbol_table.next
 
+    # module
+    def visitModule_def(self, ctx:EDBSParser.Module_defContext):
+        name = str(ctx.children)
+        params = self.visit(ctx.input_params())
+        result = self.visit(ctx.output_params())
+        ctx.output_params()
+        m = Module(params, result, ctx.module_body())
+        self.symbol_table.modules[name] = m
 
-    def visitLit(self, ctx:EDBSParser.LitContext):
-        value = float(str(ctx.NUMBER()).replace(',', '.'))
+    def visitOutput_params(self, ctx:EDBSParser.Output_paramsContext):
+        return str(ctx.IDENTIFIER())
+
+    def visitInput_params(self, ctx:EDBSParser.Input_paramsContext):
+        return self.visit(ctx.param_list())
+
+    def visitParam_list(self, ctx:EDBSParser.Param_listContext):
+        idx = 0
+        current = ctx.IDENTIFIER(idx)
+        result = []
+        while current is not None:
+            result.append(str(current))
+            idx += 1
+            current = ctx.IDENTIFIER(idx)
+        return result
+
+    # variables & literals
+    def visitStrlit(self, ctx:EDBSParser.StrlitContext):
+        return self.visit(ctx.str_literal())
+
+    def visitStr_literal(self, ctx:EDBSParser.Str_literalContext):
+        if ctx.STRING() is not None:
+            return str(ctx.STRING())[1:-1]
+        elif ctx.NEWLINE_CHAR():
+            return '\n'
+        elif ctx.WHITESPACE_CHAR():
+            return ' '
+        elif ctx.NULL_CHAR():
+            return None
+
+    def visitNolit(self, ctx:EDBSParser.NolitContext):
+        value = float(str(ctx.NUMBER()).replace(",",'.'))
         return value
 
     def visitVar(self, ctx:EDBSParser.VarContext):
@@ -75,17 +185,25 @@ class InterpreterVisitor(EDBSVisitor):
         value = self.symbol_table.get_var(name)
         return value
 
-    def visitNull(self, ctx:EDBSParser.NullContext):
-        return None
+    def visitCall_op(self, ctx:EDBSParser.Call_opContext):
+        name = str(ctx.IDENTIFIER())
+        actual_params = CollectActualParams(self.symbol_table)
+        actual_params.visit(ctx.actual_param_list())
+        module = self.symbol_table.modules[name]
+        global_scope = self.symbol_table
+        self.symbol_table = SymbolTable()
+        for p, v in zip(module.formal_params, actual_params.values):
+            self.symbol_table.add_var(p,v)
+        try:
+            self.visit(module.body)
+        except ExitCall:
+            pass # TODO: Error handling
+        result = self.symbol_table.get_var(module.result)
+        self.symbol_table = global_scope
+        return result
 
-    # def visitWhile_stmt(self, ctx:EDBSParser.While_stmtContext):
-    #     cond_true = self.visit(ctx.cond_stmt())
-    #     while cond_true:
-    #         for c in ctx.children:
-    #             self.visit(c)
-    #             cond_true = self.visit(c)
 
-    # expression operations
+    # expr operations
     def visitMul(self, ctx:EDBSParser.MulContext):
         return self.visit(ctx.getChild(0)) * self.visit(ctx.getChild(2))
 
@@ -101,25 +219,14 @@ class InterpreterVisitor(EDBSVisitor):
     def visitNested(self, ctx:EDBSParser.NestedContext):
         return self.visit(ctx.expr_op())
 
-    # variables & literals
-    def visitStrlit(self, ctx:EDBSParser.StrlitContext):
-        return self.visit(ctx.str_lit())
-
-    def visitStr_lit(self, ctx:EDBSParser.Str_litContext):
-        if ctx.STRING() is not None:
-            return str(ctx.STRING())[1:-1]
-        elif ctx.NEWLINE_CHAR():
-            return '\n'
-        elif ctx.WHITESPACE_CHAR():
-            return ' '
-        elif ctx.NULL_CHAR():
-            return None
+    def visitList_op(self, ctx:EDBSParser.List_opContext):
+        return None # TODO: error handling
 
 def main():
     # input_stream = FileStream("./Example code/hello.edbs", encoding="utf-8")
-    input_stream = FileStream("./Example code/calc.edbs", encoding="utf-8")
+    # input_stream = FileStream("./Example code/calc.edbs", encoding="utf-8")
     # input_stream = FileStream("./Example code/laan.edbs", encoding="utf-8")
-    # input_stream = FileStream("./Example code/modules.edbs", encoding="utf-8")
+    input_stream = FileStream("./Example code/modules.edbs", encoding="utf-8")
     # input_stream = FileStream("./Example code/wordcount.edbs", encoding="utf-8")
     lexer = EDBSLexer(input_stream)
     token_stream = CommonTokenStream(lexer)

@@ -1,10 +1,10 @@
 lexer grammar EDBSTokens;
 
+FINISH_KEYWORD : 'FERDIG.';
 PERIOD : '.';
 COLON : ':';
 COMMA : ',';
 PRIMED: '\'';
-APOSTROPHE: ['];
 
 WRITE_KEYWORD : 'SKRIV';
 CALC_KEYWORD : 'REKN';
@@ -16,17 +16,23 @@ MODULE_PARAM_KEYWORD : 'MED';
 INPUT_PARAM_KEYWORD : 'INN';
 OUTPUT_PARAM_KEYWORD: 'UT';
 MODULE_BODY_KEYWORD: 'SOM';
-EXIT_MODULE_KEYWORD: 'AVSLUT MODUL.';
+MODULE_KEYWORD: 'MODUL';
+EXIT_KEYWORD: 'AVSLUT';
 CALL_MODULE_KEYWORD: 'KALL';
 FILE_KEYWORD: 'FIL';
 IN_KEYWORD: 'i';
 READ_KEYWORD : 'LES';
-FINISH_KEYWORD : 'FERDIG.';
+
 NEXT_KEYWORD : 'NESTE';
 LENGTH_KEYWORD : 'LENGDE';
 OF_KEYWORD : 'AV';
+EXCLAMATION: '!';
 
-OP_SUB: '–';
+BOP_NOT : 'IKKJE';
+BOP_AND : 'OG';
+BOP_OR : 'ELLER';
+
+OP_SUB: '-';
 OP_ADD : '+';
 OP_DIV : '/';
 OP_MUL : '*';
@@ -45,10 +51,6 @@ SOP_REPEAT: '**';
 SOP_SPLIT: '//';
 SOP_SUBSTR: '--';
 
-BOP_NOT : 'IKKJE';
-BOP_AND : 'OG';
-BOP_OR : 'ELLER';
-
 LOP_NEXT : 'neste';
 LOP_FIND : 'finn';
 LOP_BACK : 'førre';
@@ -64,9 +66,9 @@ fragment CHAR_PLUS : CHAR | '-';
 fragment DIGIT : [0-9];
 
 STRING : '«' (~[»])* '»';
-IDENTIFIER : CHAR CHAR_PLUS* APOSTROPHE*;
+IDENTIFIER : CHAR CHAR_PLUS*;
 
 NUMBER: '-'? DIGIT+ (',' DIGIT+)?;
-COMMENT : 'OBS!' (~[\r\n])* NEWLINE;
-NEWLINE : '\r'? '\n';
+COMMENT : 'OBS!' (~[\r\n])* NEWLINE -> skip;
+NEWLINE : '\r'? '\n' [ \r\n\t]*;
 WHITESPACE : [ \r\n\t]+ -> skip;
