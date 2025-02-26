@@ -1,9 +1,13 @@
 import sys
+from multiprocessing.reduction import register
+from typing import Literal
 
 from antlr4 import *
 from edbs.EDBSLexer import EDBSLexer
 from edbs.EDBSParser import EDBSParser
 from edbs.EDBSVisitor import EDBSVisitor
+
+EDBS_TYP = Literal["streng", "tal", "hugseliste"]
 
 class ExitCall(Exception):
     pass
@@ -16,6 +20,12 @@ class VarAlreadyDefined(Exception):
     def __init__(self, name: str):
         self.name = name
 
+class UnsoundTypes(Exception):
+    def __init__(self, name: str, expected: set[EDBS_TYP], actual: set[EDBS_TYP]):
+        self.name = name
+        self.expected = expected
+        self.actual = actual
+
 class Module:
     def __init__(self, formal_params, result, body):
         self.formal_params = formal_params
@@ -25,6 +35,7 @@ class Module:
 class SymbolTable:
     def __init__(self, next = None):
         self.storage = {}
+        self.types = {}
         self.modules = {}
         self.next = next
 
@@ -52,6 +63,9 @@ class SymbolTable:
         if not result and self.next is not None:
             return self.next.is_defined(name)
         return result
+
+    def resister_var_name(self, name: str):
+        self.types[name] = {"streng", "tal", "hugseliste"}
 
 class CollectActualParams(EDBSVisitor):
     def __init__(self, symbol_table):
@@ -200,7 +214,6 @@ class InterpreterVisitor(EDBSVisitor):
         self.symbol_table = global_scope
         return result
 
-
     # expr operations
     def visitMul(self, ctx:EDBSParser.MulContext):
         return self.visit(ctx.getChild(0)) * self.visit(ctx.getChild(2))
@@ -219,6 +232,9 @@ class InterpreterVisitor(EDBSVisitor):
 
     def visitList_op(self, ctx:EDBSParser.List_opContext):
         return None # TODO: error handling
+
+    def visitConcat(self, ctx:EDBSParser.ConcatContext):
+        return self.visit(ctx.getChild(0)) + self.visit(ctx.getChild(2))
 
     # comp
     def visitNot(self, ctx:EDBSParser.NotContext):
@@ -247,21 +263,147 @@ class InterpreterVisitor(EDBSVisitor):
         elif ctx.COMP_GEQ() is not None:
             return lhs >= rhs
 
+class TypeChecker(EDBSVisitor):
+    def __init__(self, symbol_table: SymbolTable):
+        self.symbol_table = symbol_table
+        # TODO: quick and dirty! This has to be a stack to make it properly!
+        self.current_pushdown = set()
+
+    def visitMutate(self, ctx:EDBSParser.MutateContext):
+        name = str(ctx.IDENTIFIER())
+        admissable_types = self.visit(ctx.expr_op())
+        self.symbol_table.types[name] = admissable_types
+
+    def visitCalc(self, ctx:EDBSParser.CalcContext):
+        name = str(ctx.IDENTIFIER())
+        admissable_types = self.visit(ctx.expr_op())
+        self.symbol_table.types[name] = admissable_types
+
+    def visitRead(self, ctx:EDBSParser.ReadContext):
+        name = str(ctx.IDENTIFIER())
+        self.symbol_table.resister_var_name(name)
+
+    def visitAdd(self, ctx:EDBSParser.AddContext):
+        self.current_pushdown = {'tal'}
+        self.visit(ctx.getChild(0))
+        self.visit(ctx.getChild(2))
+        return {'tal'}
+
+    def visitDiv(self, ctx:EDBSParser.DivContext):
+        self.current_pushdown = {'tal'}
+        self.visit(ctx.getChild(0))
+        self.visit(ctx.getChild(2))
+        return {'tal'}
+
+    def visitMul(self, ctx:EDBSParser.MulContext):
+        self.current_pushdown = {'tal'}
+        self.visit(ctx.getChild(0))
+        self.visit(ctx.getChild(2))
+        return {'tal'}
+
+    def visitSub(self, ctx:EDBSParser.SubContext):
+        self.current_pushdown = {'tal'}
+        self.visit(ctx.getChild(0))
+        self.visit(ctx.getChild(2))
+        return {'tal'}
+
+    def visitVar(self, ctx:EDBSParser.VarContext):
+        name = str(ctx.IDENTIFIER())
+        result_types = self.current_pushdown.intersection(self.symbol_table.types[name])
+        if len(result_types) == 0:
+            raise UnsoundTypes(name, self.current_pushdown, self.symbol_table.types[name])
+        else:
+            self.symbol_table.types[name] = result_types
+            return result_types
+
+    def visitNolit(self, ctx:EDBSParser.NolitContext):
+        return {'tal'}
+
+    def visitStrlit(self, ctx:EDBSParser.StrlitContext):
+        return {'streng'}
+
+    def visitStr_literal(self, ctx:EDBSParser.Str_literalContext):
+        return {'streng'}
+
+    def visitNested(self, ctx:EDBSParser.NestedContext):
+        return self.visit(ctx.expr_op())
+
+    def visitSplit(self, ctx:EDBSParser.SplitContext):
+        self.current_pushdown = {'streng'}
+        self.visit(ctx.getChild(0))
+        self.current_pushdown = {'tal'}
+        self.visit(ctx.getChild(2))
+        return {'streng'}
+
+    def visitSubstr(self, ctx:EDBSParser.SubstrContext):
+        self.current_pushdown = {'streng'}
+        self.visit(ctx.getChild(0))
+        self.current_pushdown = {'tal'}
+        self.visit(ctx.getChild(2))
+        return {'hugseliste'}
+
+    def visitRepeat(self, ctx:EDBSParser.RepeatContext):
+        self.current_pushdown = {'streng'}
+        self.visit(ctx.getChild(0))
+        self.current_pushdown = {'tal'}
+        self.visit(ctx.getChild(2))
+        return {'streng'}
+
+    def visitConcat(self, ctx:EDBSParser.ConcatContext):
+        self.current_pushdown = {'streng'}
+        self.visit(ctx.getChild(0))
+        self.visit(ctx.getChild(2))
+        return {'streng'}
+
+    def visitCall_op(self, ctx:EDBSParser.Call_opContext):
+        # TODO: challenge implement type inference med moduler!
+        return {'streng', 'tal', 'hugseliste'}
+
+    def visitList_op(self, ctx:EDBSParser.List_opContext):
+        return self.visit(ctx.list_command())
+
+    def visitList_command(self, ctx:EDBSParser.List_commandContext):
+        if ctx.LOP_NEXT() or ctx.LOP_BACK() or ctx.LOP_FIND():
+            return {'tal', 'streng'}
+        elif ctx.LOP_RESET():
+            return set()
+
+    def summarize_types(self):
+        for var_name in self.symbol_table.types.keys():
+            types = self.symbol_table.types[var_name]
+            if len(types) == 1:
+                print(f"{var_name} er {types.__iter__().__next__()}")
+            else:
+                print(f"Feil: {var_name} er uklart!")
 
 def main():
     # input_stream = FileStream("./Example code/hello.edbs", encoding="utf-8")
     # input_stream = FileStream("./Example code/calc.edbs", encoding="utf-8")
     # input_stream = FileStream("./Example code/laan.edbs", encoding="utf-8")
-    input_stream = FileStream("./Example code/modules.edbs", encoding="utf-8")
+    # input_stream = FileStream("./Example code/modules.edbs", encoding="utf-8")
     # input_stream = FileStream("./Example code/wordcount.edbs", encoding="utf-8")
+    input_stream = FileStream("./Example code/scopes.edbs", encoding="utf-8")
+    # input_stream = FileStream("./Example code/types.edbs", encoding="utf-8")
+
     lexer = EDBSLexer(input_stream)
     token_stream = CommonTokenStream(lexer)
     parser = EDBSParser(token_stream)
     tree = parser.program()
     symbol_table = SymbolTable()
+
     visitor = InterpreterVisitor(symbol_table)
-    
     visitor.visit(tree)
+
+    # type_check = TypeChecker(symbol_table)
+    # try:
+    #     type_check.visit(tree)
+    #     type_check.summarize_types()
+    # except UnsoundTypes as e:
+    #     print(f"FEIL! Stedfortreter {e.name} har feil type! Det forventes å være {e.expected} mend den er {e.actual}")
+    # except VarAlreadyDefined as e:
+    #     print(f"FEIL! Stedfortreter {e.name} finnast alt!")
+    # except UndefinedVarRef as e:
+    #     print(f"FEIL! Stedfortreter {e.name} finnast ikkje")
 
 if __name__ == '__main__':
     main()
