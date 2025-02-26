@@ -10,104 +10,94 @@ else:
 
 def serializedATN():
     return [
-        4,1,57,272,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
+        4,1,57,244,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
         6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,
-        2,14,7,14,2,15,7,15,2,16,7,16,2,17,7,17,2,18,7,18,2,19,7,19,2,20,
-        7,20,2,21,7,21,2,22,7,22,1,0,5,0,48,8,0,10,0,12,0,51,9,0,1,0,5,0,
-        54,8,0,10,0,12,0,57,9,0,1,0,1,0,3,0,61,8,0,1,1,1,1,1,1,1,1,3,1,67,
-        8,1,1,1,1,1,3,1,71,8,1,1,1,1,1,3,1,75,8,1,1,1,1,1,1,1,3,1,80,8,1,
-        1,1,1,1,1,1,1,1,1,1,3,1,87,8,1,1,2,1,2,1,2,1,2,1,3,1,3,1,3,1,3,1,
-        4,4,4,98,8,4,11,4,12,4,99,1,5,1,5,1,5,5,5,105,8,5,10,5,12,5,108,
-        9,5,1,6,1,6,1,6,1,6,1,7,1,7,1,7,1,7,1,7,1,7,1,7,3,7,121,8,7,1,8,
-        1,8,4,8,125,8,8,11,8,12,8,126,1,9,1,9,1,10,1,10,1,10,1,10,1,10,1,
-        11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,
-        11,3,11,150,8,11,1,11,1,11,1,11,3,11,155,8,11,1,11,1,11,3,11,159,
-        8,11,1,11,1,11,3,11,163,8,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,
-        1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,
-        1,11,1,11,1,11,1,11,5,11,189,8,11,10,11,12,11,192,9,11,1,12,1,12,
-        1,12,1,12,1,12,1,12,3,12,200,8,12,1,12,1,12,1,12,1,12,1,12,1,12,
-        5,12,208,8,12,10,12,12,12,211,9,12,1,13,1,13,1,13,5,13,216,8,13,
-        10,13,12,13,219,9,13,1,14,1,14,1,14,3,14,224,8,14,1,15,1,15,1,15,
-        1,15,1,16,1,16,1,17,1,17,1,18,1,18,3,18,236,8,18,1,18,1,18,1,18,
-        3,18,241,8,18,1,18,5,18,244,8,18,10,18,12,18,247,9,18,1,18,3,18,
-        250,8,18,1,18,1,18,1,18,1,19,1,19,1,19,1,19,1,19,1,20,1,20,1,20,
-        1,20,1,20,1,21,1,21,1,21,1,21,1,22,1,22,1,22,1,22,0,2,22,24,23,0,
-        2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,0,
-        4,1,0,52,53,1,0,33,37,1,0,49,52,1,0,44,47,293,0,49,1,0,0,0,2,62,
-        1,0,0,0,4,88,1,0,0,0,6,92,1,0,0,0,8,97,1,0,0,0,10,101,1,0,0,0,12,
-        109,1,0,0,0,14,120,1,0,0,0,16,122,1,0,0,0,18,128,1,0,0,0,20,130,
-        1,0,0,0,22,162,1,0,0,0,24,199,1,0,0,0,26,212,1,0,0,0,28,223,1,0,
-        0,0,30,225,1,0,0,0,32,229,1,0,0,0,34,231,1,0,0,0,36,233,1,0,0,0,
-        38,254,1,0,0,0,40,259,1,0,0,0,42,264,1,0,0,0,44,268,1,0,0,0,46,48,
-        3,2,1,0,47,46,1,0,0,0,48,51,1,0,0,0,49,47,1,0,0,0,49,50,1,0,0,0,
-        50,55,1,0,0,0,51,49,1,0,0,0,52,54,3,12,6,0,53,52,1,0,0,0,54,57,1,
-        0,0,0,55,53,1,0,0,0,55,56,1,0,0,0,56,58,1,0,0,0,57,55,1,0,0,0,58,
-        60,5,1,0,0,59,61,5,56,0,0,60,59,1,0,0,0,60,61,1,0,0,0,61,1,1,0,0,
-        0,62,63,5,11,0,0,63,64,5,53,0,0,64,66,5,12,0,0,65,67,5,56,0,0,66,
-        65,1,0,0,0,66,67,1,0,0,0,67,68,1,0,0,0,68,70,3,4,2,0,69,71,5,56,
-        0,0,70,69,1,0,0,0,70,71,1,0,0,0,71,72,1,0,0,0,72,74,3,6,3,0,73,75,
-        5,56,0,0,74,73,1,0,0,0,74,75,1,0,0,0,75,76,1,0,0,0,76,77,5,15,0,
-        0,77,79,5,3,0,0,78,80,5,56,0,0,79,78,1,0,0,0,79,80,1,0,0,0,80,81,
-        1,0,0,0,81,82,3,8,4,0,82,83,5,17,0,0,83,84,5,16,0,0,84,86,5,2,0,
-        0,85,87,5,56,0,0,86,85,1,0,0,0,86,87,1,0,0,0,87,3,1,0,0,0,88,89,
-        5,13,0,0,89,90,5,3,0,0,90,91,3,10,5,0,91,5,1,0,0,0,92,93,5,14,0,
-        0,93,94,5,3,0,0,94,95,5,53,0,0,95,7,1,0,0,0,96,98,3,12,6,0,97,96,
-        1,0,0,0,98,99,1,0,0,0,99,97,1,0,0,0,99,100,1,0,0,0,100,9,1,0,0,0,
-        101,106,5,53,0,0,102,103,5,4,0,0,103,105,5,53,0,0,104,102,1,0,0,
-        0,105,108,1,0,0,0,106,104,1,0,0,0,106,107,1,0,0,0,107,11,1,0,0,0,
-        108,106,1,0,0,0,109,110,3,14,7,0,110,111,5,2,0,0,111,112,5,56,0,
-        0,112,13,1,0,0,0,113,121,3,36,18,0,114,121,3,38,19,0,115,121,3,16,
-        8,0,116,121,3,40,20,0,117,121,3,20,10,0,118,121,3,42,21,0,119,121,
-        3,44,22,0,120,113,1,0,0,0,120,114,1,0,0,0,120,115,1,0,0,0,120,116,
-        1,0,0,0,120,117,1,0,0,0,120,118,1,0,0,0,120,119,1,0,0,0,121,15,1,
-        0,0,0,122,124,5,6,0,0,123,125,3,18,9,0,124,123,1,0,0,0,125,126,1,
-        0,0,0,126,124,1,0,0,0,126,127,1,0,0,0,127,17,1,0,0,0,128,129,7,0,
-        0,0,129,19,1,0,0,0,130,131,5,7,0,0,131,132,5,53,0,0,132,133,5,3,
-        0,0,133,134,3,22,11,0,134,21,1,0,0,0,135,136,6,11,-1,0,136,137,5,
-        38,0,0,137,138,3,22,11,0,138,139,5,39,0,0,139,163,1,0,0,0,140,141,
-        5,23,0,0,141,142,5,24,0,0,142,163,3,22,11,6,143,144,5,18,0,0,144,
-        145,5,53,0,0,145,146,5,12,0,0,146,163,3,26,13,0,147,149,3,34,17,
-        0,148,150,5,24,0,0,149,148,1,0,0,0,149,150,1,0,0,0,150,151,1,0,0,
-        0,151,154,5,53,0,0,152,153,5,48,0,0,153,155,3,22,11,0,154,152,1,
-        0,0,0,154,155,1,0,0,0,155,163,1,0,0,0,156,158,5,53,0,0,157,159,5,
-        5,0,0,158,157,1,0,0,0,158,159,1,0,0,0,159,163,1,0,0,0,160,163,3,
-        32,16,0,161,163,5,54,0,0,162,135,1,0,0,0,162,140,1,0,0,0,162,143,
-        1,0,0,0,162,147,1,0,0,0,162,156,1,0,0,0,162,160,1,0,0,0,162,161,
-        1,0,0,0,163,190,1,0,0,0,164,165,10,15,0,0,165,166,5,32,0,0,166,189,
-        3,22,11,16,167,168,10,14,0,0,168,169,5,31,0,0,169,189,3,22,11,15,
-        170,171,10,13,0,0,171,172,5,30,0,0,172,189,3,22,11,14,173,174,10,
-        12,0,0,174,175,5,29,0,0,175,189,3,22,11,13,176,177,10,11,0,0,177,
-        178,5,40,0,0,178,189,3,22,11,12,179,180,10,10,0,0,180,181,5,41,0,
-        0,181,189,3,22,11,11,182,183,10,9,0,0,183,184,5,43,0,0,184,189,3,
-        22,11,10,185,186,10,8,0,0,186,187,5,42,0,0,187,189,3,22,11,9,188,
-        164,1,0,0,0,188,167,1,0,0,0,188,170,1,0,0,0,188,173,1,0,0,0,188,
-        176,1,0,0,0,188,179,1,0,0,0,188,182,1,0,0,0,188,185,1,0,0,0,189,
-        192,1,0,0,0,190,188,1,0,0,0,190,191,1,0,0,0,191,23,1,0,0,0,192,190,
-        1,0,0,0,193,194,6,12,-1,0,194,195,5,9,0,0,195,200,3,24,12,5,196,
-        197,5,26,0,0,197,200,3,24,12,4,198,200,3,30,15,0,199,193,1,0,0,0,
-        199,196,1,0,0,0,199,198,1,0,0,0,200,209,1,0,0,0,201,202,10,3,0,0,
-        202,203,5,27,0,0,203,208,3,24,12,4,204,205,10,2,0,0,205,206,5,28,
-        0,0,206,208,3,24,12,3,207,201,1,0,0,0,207,204,1,0,0,0,208,211,1,
-        0,0,0,209,207,1,0,0,0,209,210,1,0,0,0,210,25,1,0,0,0,211,209,1,0,
-        0,0,212,217,3,28,14,0,213,214,5,4,0,0,214,216,3,28,14,0,215,213,
-        1,0,0,0,216,219,1,0,0,0,217,215,1,0,0,0,217,218,1,0,0,0,218,27,1,
-        0,0,0,219,217,1,0,0,0,220,224,5,54,0,0,221,224,3,32,16,0,222,224,
-        5,53,0,0,223,220,1,0,0,0,223,221,1,0,0,0,223,222,1,0,0,0,224,29,
-        1,0,0,0,225,226,3,22,11,0,226,227,7,1,0,0,227,228,3,22,11,0,228,
-        31,1,0,0,0,229,230,7,2,0,0,230,33,1,0,0,0,231,232,7,3,0,0,232,35,
-        1,0,0,0,233,235,5,8,0,0,234,236,5,56,0,0,235,234,1,0,0,0,235,236,
-        1,0,0,0,236,237,1,0,0,0,237,245,3,14,7,0,238,240,5,4,0,0,239,241,
-        5,56,0,0,240,239,1,0,0,0,240,241,1,0,0,0,241,242,1,0,0,0,242,244,
-        3,14,7,0,243,238,1,0,0,0,244,247,1,0,0,0,245,243,1,0,0,0,245,246,
-        1,0,0,0,246,249,1,0,0,0,247,245,1,0,0,0,248,250,5,56,0,0,249,248,
-        1,0,0,0,249,250,1,0,0,0,250,251,1,0,0,0,251,252,5,9,0,0,252,253,
-        3,24,12,0,253,37,1,0,0,0,254,255,5,10,0,0,255,256,5,53,0,0,256,257,
-        5,3,0,0,257,258,3,22,11,0,258,39,1,0,0,0,259,260,5,21,0,0,260,261,
-        5,53,0,0,261,262,5,3,0,0,262,263,5,52,0,0,263,41,1,0,0,0,264,265,
-        5,21,0,0,265,266,5,19,0,0,266,267,5,53,0,0,267,43,1,0,0,0,268,269,
-        5,17,0,0,269,270,5,25,0,0,270,45,1,0,0,0,27,49,55,60,66,70,74,79,
-        86,99,106,120,126,149,154,158,162,188,190,199,207,209,217,223,235,
-        240,245,249
+        2,14,7,14,2,15,7,15,1,0,5,0,34,8,0,10,0,12,0,37,9,0,1,0,5,0,40,8,
+        0,10,0,12,0,43,9,0,1,0,1,0,3,0,47,8,0,1,1,1,1,1,1,1,1,3,1,53,8,1,
+        1,1,1,1,3,1,57,8,1,1,1,1,1,3,1,61,8,1,1,1,1,1,1,1,3,1,66,8,1,1,1,
+        1,1,1,1,1,1,1,1,3,1,73,8,1,1,2,1,2,1,2,1,2,1,3,1,3,1,3,1,3,1,4,4,
+        4,84,8,4,11,4,12,4,85,1,5,1,5,1,5,5,5,91,8,5,10,5,12,5,94,9,5,1,
+        6,1,6,1,6,1,6,1,7,1,7,3,7,102,8,7,1,7,1,7,1,7,3,7,107,8,7,1,7,5,
+        7,110,8,7,10,7,12,7,113,9,7,1,7,3,7,116,8,7,1,7,1,7,1,7,1,7,1,7,
+        1,7,1,7,1,7,1,7,4,7,127,8,7,11,7,12,7,128,1,7,1,7,1,7,1,7,1,7,1,
+        7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,3,7,144,8,7,1,8,1,8,1,9,1,9,1,9,1,
+        9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,3,9,162,8,9,1,9,1,9,1,
+        9,3,9,167,8,9,1,9,1,9,3,9,171,8,9,1,9,1,9,3,9,175,8,9,1,9,1,9,1,
+        9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,
+        9,1,9,1,9,1,9,1,9,1,9,5,9,201,8,9,10,9,12,9,204,9,9,1,10,1,10,1,
+        10,5,10,209,8,10,10,10,12,10,212,9,10,1,11,1,11,1,11,3,11,217,8,
+        11,1,12,1,12,1,13,1,13,1,14,1,14,1,14,1,14,3,14,227,8,14,1,14,1,
+        14,1,14,1,14,1,14,1,14,5,14,235,8,14,10,14,12,14,238,9,14,1,15,1,
+        15,1,15,1,15,1,15,0,2,18,28,16,0,2,4,6,8,10,12,14,16,18,20,22,24,
+        26,28,30,0,4,1,0,52,53,1,0,44,47,1,0,49,52,1,0,33,37,271,0,35,1,
+        0,0,0,2,48,1,0,0,0,4,74,1,0,0,0,6,78,1,0,0,0,8,83,1,0,0,0,10,87,
+        1,0,0,0,12,95,1,0,0,0,14,143,1,0,0,0,16,145,1,0,0,0,18,174,1,0,0,
+        0,20,205,1,0,0,0,22,216,1,0,0,0,24,218,1,0,0,0,26,220,1,0,0,0,28,
+        226,1,0,0,0,30,239,1,0,0,0,32,34,3,2,1,0,33,32,1,0,0,0,34,37,1,0,
+        0,0,35,33,1,0,0,0,35,36,1,0,0,0,36,41,1,0,0,0,37,35,1,0,0,0,38,40,
+        3,12,6,0,39,38,1,0,0,0,40,43,1,0,0,0,41,39,1,0,0,0,41,42,1,0,0,0,
+        42,44,1,0,0,0,43,41,1,0,0,0,44,46,5,1,0,0,45,47,5,56,0,0,46,45,1,
+        0,0,0,46,47,1,0,0,0,47,1,1,0,0,0,48,49,5,11,0,0,49,50,5,53,0,0,50,
+        52,5,12,0,0,51,53,5,56,0,0,52,51,1,0,0,0,52,53,1,0,0,0,53,54,1,0,
+        0,0,54,56,3,4,2,0,55,57,5,56,0,0,56,55,1,0,0,0,56,57,1,0,0,0,57,
+        58,1,0,0,0,58,60,3,6,3,0,59,61,5,56,0,0,60,59,1,0,0,0,60,61,1,0,
+        0,0,61,62,1,0,0,0,62,63,5,15,0,0,63,65,5,3,0,0,64,66,5,56,0,0,65,
+        64,1,0,0,0,65,66,1,0,0,0,66,67,1,0,0,0,67,68,3,8,4,0,68,69,5,17,
+        0,0,69,70,5,16,0,0,70,72,5,2,0,0,71,73,5,56,0,0,72,71,1,0,0,0,72,
+        73,1,0,0,0,73,3,1,0,0,0,74,75,5,13,0,0,75,76,5,3,0,0,76,77,3,10,
+        5,0,77,5,1,0,0,0,78,79,5,14,0,0,79,80,5,3,0,0,80,81,5,53,0,0,81,
+        7,1,0,0,0,82,84,3,12,6,0,83,82,1,0,0,0,84,85,1,0,0,0,85,83,1,0,0,
+        0,85,86,1,0,0,0,86,9,1,0,0,0,87,92,5,53,0,0,88,89,5,4,0,0,89,91,
+        5,53,0,0,90,88,1,0,0,0,91,94,1,0,0,0,92,90,1,0,0,0,92,93,1,0,0,0,
+        93,11,1,0,0,0,94,92,1,0,0,0,95,96,3,14,7,0,96,97,5,2,0,0,97,98,5,
+        56,0,0,98,13,1,0,0,0,99,101,5,8,0,0,100,102,5,56,0,0,101,100,1,0,
+        0,0,101,102,1,0,0,0,102,103,1,0,0,0,103,111,3,14,7,0,104,106,5,4,
+        0,0,105,107,5,56,0,0,106,105,1,0,0,0,106,107,1,0,0,0,107,108,1,0,
+        0,0,108,110,3,14,7,0,109,104,1,0,0,0,110,113,1,0,0,0,111,109,1,0,
+        0,0,111,112,1,0,0,0,112,115,1,0,0,0,113,111,1,0,0,0,114,116,5,56,
+        0,0,115,114,1,0,0,0,115,116,1,0,0,0,116,117,1,0,0,0,117,118,5,9,
+        0,0,118,119,3,28,14,0,119,144,1,0,0,0,120,121,5,10,0,0,121,122,5,
+        53,0,0,122,123,5,3,0,0,123,144,3,18,9,0,124,126,5,6,0,0,125,127,
+        3,16,8,0,126,125,1,0,0,0,127,128,1,0,0,0,128,126,1,0,0,0,128,129,
+        1,0,0,0,129,144,1,0,0,0,130,131,5,7,0,0,131,132,5,53,0,0,132,133,
+        5,3,0,0,133,144,3,18,9,0,134,135,5,21,0,0,135,136,5,53,0,0,136,137,
+        5,3,0,0,137,144,5,52,0,0,138,139,5,21,0,0,139,140,5,19,0,0,140,144,
+        5,53,0,0,141,142,5,17,0,0,142,144,5,25,0,0,143,99,1,0,0,0,143,120,
+        1,0,0,0,143,124,1,0,0,0,143,130,1,0,0,0,143,134,1,0,0,0,143,138,
+        1,0,0,0,143,141,1,0,0,0,144,15,1,0,0,0,145,146,7,0,0,0,146,17,1,
+        0,0,0,147,148,6,9,-1,0,148,149,5,38,0,0,149,150,3,18,9,0,150,151,
+        5,39,0,0,151,175,1,0,0,0,152,153,5,23,0,0,153,154,5,24,0,0,154,175,
+        3,18,9,6,155,156,5,18,0,0,156,157,5,53,0,0,157,158,5,12,0,0,158,
+        175,3,20,10,0,159,161,3,24,12,0,160,162,5,24,0,0,161,160,1,0,0,0,
+        161,162,1,0,0,0,162,163,1,0,0,0,163,166,5,53,0,0,164,165,5,48,0,
+        0,165,167,3,18,9,0,166,164,1,0,0,0,166,167,1,0,0,0,167,175,1,0,0,
+        0,168,170,5,53,0,0,169,171,5,5,0,0,170,169,1,0,0,0,170,171,1,0,0,
+        0,171,175,1,0,0,0,172,175,3,26,13,0,173,175,5,54,0,0,174,147,1,0,
+        0,0,174,152,1,0,0,0,174,155,1,0,0,0,174,159,1,0,0,0,174,168,1,0,
+        0,0,174,172,1,0,0,0,174,173,1,0,0,0,175,202,1,0,0,0,176,177,10,15,
+        0,0,177,178,5,32,0,0,178,201,3,18,9,16,179,180,10,14,0,0,180,181,
+        5,31,0,0,181,201,3,18,9,15,182,183,10,13,0,0,183,184,5,30,0,0,184,
+        201,3,18,9,14,185,186,10,12,0,0,186,187,5,29,0,0,187,201,3,18,9,
+        13,188,189,10,11,0,0,189,190,5,40,0,0,190,201,3,18,9,12,191,192,
+        10,10,0,0,192,193,5,41,0,0,193,201,3,18,9,11,194,195,10,9,0,0,195,
+        196,5,43,0,0,196,201,3,18,9,10,197,198,10,8,0,0,198,199,5,42,0,0,
+        199,201,3,18,9,9,200,176,1,0,0,0,200,179,1,0,0,0,200,182,1,0,0,0,
+        200,185,1,0,0,0,200,188,1,0,0,0,200,191,1,0,0,0,200,194,1,0,0,0,
+        200,197,1,0,0,0,201,204,1,0,0,0,202,200,1,0,0,0,202,203,1,0,0,0,
+        203,19,1,0,0,0,204,202,1,0,0,0,205,210,3,22,11,0,206,207,5,4,0,0,
+        207,209,3,22,11,0,208,206,1,0,0,0,209,212,1,0,0,0,210,208,1,0,0,
+        0,210,211,1,0,0,0,211,21,1,0,0,0,212,210,1,0,0,0,213,217,5,54,0,
+        0,214,217,3,26,13,0,215,217,5,53,0,0,216,213,1,0,0,0,216,214,1,0,
+        0,0,216,215,1,0,0,0,217,23,1,0,0,0,218,219,7,1,0,0,219,25,1,0,0,
+        0,220,221,7,2,0,0,221,27,1,0,0,0,222,223,6,14,-1,0,223,224,5,26,
+        0,0,224,227,3,28,14,4,225,227,3,30,15,0,226,222,1,0,0,0,226,225,
+        1,0,0,0,227,236,1,0,0,0,228,229,10,3,0,0,229,230,5,27,0,0,230,235,
+        3,28,14,4,231,232,10,2,0,0,232,233,5,28,0,0,233,235,3,28,14,3,234,
+        228,1,0,0,0,234,231,1,0,0,0,235,238,1,0,0,0,236,234,1,0,0,0,236,
+        237,1,0,0,0,237,29,1,0,0,0,238,236,1,0,0,0,239,240,3,18,9,0,240,
+        241,7,3,0,0,241,242,3,18,9,0,242,31,1,0,0,0,27,35,41,46,52,56,60,
+        65,72,85,92,101,106,111,115,128,143,161,166,170,174,200,202,210,
+        216,226,234,236
     ]
 
 class EDBSParser ( Parser ):
@@ -155,28 +145,19 @@ class EDBSParser ( Parser ):
     RULE_param_list = 5
     RULE_main_stmt = 6
     RULE_statement = 7
-    RULE_write_stmt = 8
-    RULE_write_arg = 9
-    RULE_calc_stmt = 10
-    RULE_expr_op = 11
-    RULE_bool_expr = 12
-    RULE_actual_param_list = 13
-    RULE_actual_param = 14
+    RULE_write_arg = 8
+    RULE_expr_op = 9
+    RULE_actual_param_list = 10
+    RULE_actual_param = 11
+    RULE_list_command = 12
+    RULE_str_literal = 13
+    RULE_bool_expr = 14
     RULE_comparison = 15
-    RULE_str_literal = 16
-    RULE_list_command = 17
-    RULE_while_stmt = 18
-    RULE_mutate_stmt = 19
-    RULE_read_assgn = 20
-    RULE_read_file_stmt = 21
-    RULE_return = 22
 
     ruleNames =  [ "program", "module_def", "input_params", "output_params", 
                    "module_body", "param_list", "main_stmt", "statement", 
-                   "write_stmt", "write_arg", "calc_stmt", "expr_op", "bool_expr", 
-                   "actual_param_list", "actual_param", "comparison", "str_literal", 
-                   "list_command", "while_stmt", "mutate_stmt", "read_assgn", 
-                   "read_file_stmt", "return" ]
+                   "write_arg", "expr_op", "actual_param_list", "actual_param", 
+                   "list_command", "str_literal", "bool_expr", "comparison" ]
 
     EOF = Token.EOF
     FINISH_KEYWORD=1
@@ -300,33 +281,33 @@ class EDBSParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 49
+            self.state = 35
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==11:
-                self.state = 46
+                self.state = 32
                 self.module_def()
-                self.state = 51
+                self.state = 37
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 55
+            self.state = 41
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while (((_la) & ~0x3f) == 0 and ((1 << _la) & 2229696) != 0):
-                self.state = 52
+                self.state = 38
                 self.main_stmt()
-                self.state = 57
+                self.state = 43
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 58
+            self.state = 44
             self.match(EDBSParser.FINISH_KEYWORD)
-            self.state = 60
+            self.state = 46
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==56:
-                self.state = 59
+                self.state = 45
                 self.match(EDBSParser.NEWLINE)
 
 
@@ -415,65 +396,65 @@ class EDBSParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 62
+            self.state = 48
             self.match(EDBSParser.DEF_MOULE_KEYWORD)
-            self.state = 63
+            self.state = 49
             self.match(EDBSParser.IDENTIFIER)
-            self.state = 64
+            self.state = 50
             self.match(EDBSParser.MODULE_PARAM_KEYWORD)
-            self.state = 66
+            self.state = 52
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==56:
-                self.state = 65
+                self.state = 51
                 self.match(EDBSParser.NEWLINE)
 
 
-            self.state = 68
+            self.state = 54
             self.input_params()
-            self.state = 70
+            self.state = 56
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==56:
-                self.state = 69
+                self.state = 55
                 self.match(EDBSParser.NEWLINE)
 
 
-            self.state = 72
+            self.state = 58
             self.output_params()
-            self.state = 74
+            self.state = 60
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==56:
-                self.state = 73
+                self.state = 59
                 self.match(EDBSParser.NEWLINE)
 
 
-            self.state = 76
+            self.state = 62
             self.match(EDBSParser.MODULE_BODY_KEYWORD)
-            self.state = 77
+            self.state = 63
             self.match(EDBSParser.COLON)
-            self.state = 79
+            self.state = 65
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==56:
-                self.state = 78
+                self.state = 64
                 self.match(EDBSParser.NEWLINE)
 
 
-            self.state = 81
+            self.state = 67
             self.module_body()
-            self.state = 82
+            self.state = 68
             self.match(EDBSParser.EXIT_KEYWORD)
-            self.state = 83
+            self.state = 69
             self.match(EDBSParser.MODULE_KEYWORD)
-            self.state = 84
+            self.state = 70
             self.match(EDBSParser.PERIOD)
-            self.state = 86
+            self.state = 72
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==56:
-                self.state = 85
+                self.state = 71
                 self.match(EDBSParser.NEWLINE)
 
 
@@ -529,11 +510,11 @@ class EDBSParser ( Parser ):
         self.enterRule(localctx, 4, self.RULE_input_params)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 88
+            self.state = 74
             self.match(EDBSParser.INPUT_PARAM_KEYWORD)
-            self.state = 89
+            self.state = 75
             self.match(EDBSParser.COLON)
-            self.state = 90
+            self.state = 76
             self.param_list()
         except RecognitionException as re:
             localctx.exception = re
@@ -586,11 +567,11 @@ class EDBSParser ( Parser ):
         self.enterRule(localctx, 6, self.RULE_output_params)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 92
+            self.state = 78
             self.match(EDBSParser.OUTPUT_PARAM_KEYWORD)
-            self.state = 93
+            self.state = 79
             self.match(EDBSParser.COLON)
-            self.state = 94
+            self.state = 80
             self.match(EDBSParser.IDENTIFIER)
         except RecognitionException as re:
             localctx.exception = re
@@ -641,17 +622,17 @@ class EDBSParser ( Parser ):
         self.enterRule(localctx, 8, self.RULE_module_body)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 97 
+            self.state = 83 
             self._errHandler.sync(self)
             _alt = 1
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt == 1:
-                    self.state = 96
+                    self.state = 82
                     self.main_stmt()
 
                 else:
                     raise NoViableAltException(self)
-                self.state = 99 
+                self.state = 85 
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,8,self._ctx)
 
@@ -710,17 +691,17 @@ class EDBSParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 101
+            self.state = 87
             self.match(EDBSParser.IDENTIFIER)
-            self.state = 106
+            self.state = 92
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==4:
-                self.state = 102
+                self.state = 88
                 self.match(EDBSParser.COMMA)
-                self.state = 103
+                self.state = 89
                 self.match(EDBSParser.IDENTIFIER)
-                self.state = 108
+                self.state = 94
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -776,11 +757,11 @@ class EDBSParser ( Parser ):
         self.enterRule(localctx, 12, self.RULE_main_stmt)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 109
+            self.state = 95
             self.statement()
-            self.state = 110
+            self.state = 96
             self.match(EDBSParser.PERIOD)
-            self.state = 111
+            self.state = 97
             self.match(EDBSParser.NEWLINE)
         except RecognitionException as re:
             localctx.exception = re
@@ -798,124 +779,189 @@ class EDBSParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def while_stmt(self):
-            return self.getTypedRuleContext(EDBSParser.While_stmtContext,0)
-
-
-        def mutate_stmt(self):
-            return self.getTypedRuleContext(EDBSParser.Mutate_stmtContext,0)
-
-
-        def write_stmt(self):
-            return self.getTypedRuleContext(EDBSParser.Write_stmtContext,0)
-
-
-        def read_assgn(self):
-            return self.getTypedRuleContext(EDBSParser.Read_assgnContext,0)
-
-
-        def calc_stmt(self):
-            return self.getTypedRuleContext(EDBSParser.Calc_stmtContext,0)
-
-
-        def read_file_stmt(self):
-            return self.getTypedRuleContext(EDBSParser.Read_file_stmtContext,0)
-
-
-        def return_(self):
-            return self.getTypedRuleContext(EDBSParser.ReturnContext,0)
-
 
         def getRuleIndex(self):
             return EDBSParser.RULE_statement
 
+     
+        def copyFrom(self, ctx:ParserRuleContext):
+            super().copyFrom(ctx)
+
+
+
+    class ReadfileContext(StatementContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a EDBSParser.StatementContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def READ_KEYWORD(self):
+            return self.getToken(EDBSParser.READ_KEYWORD, 0)
+        def FILE_KEYWORD(self):
+            return self.getToken(EDBSParser.FILE_KEYWORD, 0)
+        def IDENTIFIER(self):
+            return self.getToken(EDBSParser.IDENTIFIER, 0)
+
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterStatement" ):
-                listener.enterStatement(self)
+            if hasattr( listener, "enterReadfile" ):
+                listener.enterReadfile(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitStatement" ):
-                listener.exitStatement(self)
+            if hasattr( listener, "exitReadfile" ):
+                listener.exitReadfile(self)
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitStatement" ):
-                return visitor.visitStatement(self)
+            if hasattr( visitor, "visitReadfile" ):
+                return visitor.visitReadfile(self)
             else:
                 return visitor.visitChildren(self)
 
 
+    class MutateContext(StatementContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a EDBSParser.StatementContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def UPDATE_KEYWORD(self):
+            return self.getToken(EDBSParser.UPDATE_KEYWORD, 0)
+        def IDENTIFIER(self):
+            return self.getToken(EDBSParser.IDENTIFIER, 0)
+        def COLON(self):
+            return self.getToken(EDBSParser.COLON, 0)
+        def expr_op(self):
+            return self.getTypedRuleContext(EDBSParser.Expr_opContext,0)
 
 
-    def statement(self):
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterMutate" ):
+                listener.enterMutate(self)
 
-        localctx = EDBSParser.StatementContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 14, self.RULE_statement)
-        try:
-            self.state = 120
-            self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,10,self._ctx)
-            if la_ == 1:
-                self.enterOuterAlt(localctx, 1)
-                self.state = 113
-                self.while_stmt()
-                pass
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitMutate" ):
+                listener.exitMutate(self)
 
-            elif la_ == 2:
-                self.enterOuterAlt(localctx, 2)
-                self.state = 114
-                self.mutate_stmt()
-                pass
-
-            elif la_ == 3:
-                self.enterOuterAlt(localctx, 3)
-                self.state = 115
-                self.write_stmt()
-                pass
-
-            elif la_ == 4:
-                self.enterOuterAlt(localctx, 4)
-                self.state = 116
-                self.read_assgn()
-                pass
-
-            elif la_ == 5:
-                self.enterOuterAlt(localctx, 5)
-                self.state = 117
-                self.calc_stmt()
-                pass
-
-            elif la_ == 6:
-                self.enterOuterAlt(localctx, 6)
-                self.state = 118
-                self.read_file_stmt()
-                pass
-
-            elif la_ == 7:
-                self.enterOuterAlt(localctx, 7)
-                self.state = 119
-                self.return_()
-                pass
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMutate" ):
+                return visitor.visitMutate(self)
+            else:
+                return visitor.visitChildren(self)
 
 
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
+    class ReadContext(StatementContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a EDBSParser.StatementContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def READ_KEYWORD(self):
+            return self.getToken(EDBSParser.READ_KEYWORD, 0)
+        def IDENTIFIER(self):
+            return self.getToken(EDBSParser.IDENTIFIER, 0)
+        def COLON(self):
+            return self.getToken(EDBSParser.COLON, 0)
+        def STRING(self):
+            return self.getToken(EDBSParser.STRING, 0)
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterRead" ):
+                listener.enterRead(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitRead" ):
+                listener.exitRead(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRead" ):
+                return visitor.visitRead(self)
+            else:
+                return visitor.visitChildren(self)
 
 
-    class Write_stmtContext(ParserRuleContext):
-        __slots__ = 'parser'
+    class CalcContext(StatementContext):
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a EDBSParser.StatementContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def CALC_KEYWORD(self):
+            return self.getToken(EDBSParser.CALC_KEYWORD, 0)
+        def IDENTIFIER(self):
+            return self.getToken(EDBSParser.IDENTIFIER, 0)
+        def COLON(self):
+            return self.getToken(EDBSParser.COLON, 0)
+        def expr_op(self):
+            return self.getTypedRuleContext(EDBSParser.Expr_opContext,0)
+
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterCalc" ):
+                listener.enterCalc(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitCalc" ):
+                listener.exitCalc(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCalc" ):
+                return visitor.visitCalc(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+    class WhileContext(StatementContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a EDBSParser.StatementContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def REPEAT_KEYWORD(self):
+            return self.getToken(EDBSParser.REPEAT_KEYWORD, 0)
+        def statement(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(EDBSParser.StatementContext)
+            else:
+                return self.getTypedRuleContext(EDBSParser.StatementContext,i)
+
+        def CONDITION_KEYWORD(self):
+            return self.getToken(EDBSParser.CONDITION_KEYWORD, 0)
+        def bool_expr(self):
+            return self.getTypedRuleContext(EDBSParser.Bool_exprContext,0)
+
+        def NEWLINE(self, i:int=None):
+            if i is None:
+                return self.getTokens(EDBSParser.NEWLINE)
+            else:
+                return self.getToken(EDBSParser.NEWLINE, i)
+        def COMMA(self, i:int=None):
+            if i is None:
+                return self.getTokens(EDBSParser.COMMA)
+            else:
+                return self.getToken(EDBSParser.COMMA, i)
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterWhile" ):
+                listener.enterWhile(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitWhile" ):
+                listener.exitWhile(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitWhile" ):
+                return visitor.visitWhile(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+    class WriteContext(StatementContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a EDBSParser.StatementContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
 
         def WRITE_KEYWORD(self):
             return self.getToken(EDBSParser.WRITE_KEYWORD, 0)
-
         def write_arg(self, i:int=None):
             if i is None:
                 return self.getTypedRuleContexts(EDBSParser.Write_argContext)
@@ -923,46 +969,184 @@ class EDBSParser ( Parser ):
                 return self.getTypedRuleContext(EDBSParser.Write_argContext,i)
 
 
-        def getRuleIndex(self):
-            return EDBSParser.RULE_write_stmt
-
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterWrite_stmt" ):
-                listener.enterWrite_stmt(self)
+            if hasattr( listener, "enterWrite" ):
+                listener.enterWrite(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitWrite_stmt" ):
-                listener.exitWrite_stmt(self)
+            if hasattr( listener, "exitWrite" ):
+                listener.exitWrite(self)
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitWrite_stmt" ):
-                return visitor.visitWrite_stmt(self)
+            if hasattr( visitor, "visitWrite" ):
+                return visitor.visitWrite(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+    class ReturnContext(StatementContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a EDBSParser.StatementContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def EXIT_KEYWORD(self):
+            return self.getToken(EDBSParser.EXIT_KEYWORD, 0)
+        def EXCLAMATION(self):
+            return self.getToken(EDBSParser.EXCLAMATION, 0)
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterReturn" ):
+                listener.enterReturn(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitReturn" ):
+                listener.exitReturn(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitReturn" ):
+                return visitor.visitReturn(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
+    def statement(self):
 
-    def write_stmt(self):
-
-        localctx = EDBSParser.Write_stmtContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 16, self.RULE_write_stmt)
+        localctx = EDBSParser.StatementContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 14, self.RULE_statement)
         self._la = 0 # Token type
         try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 122
-            self.match(EDBSParser.WRITE_KEYWORD)
-            self.state = 124 
+            self.state = 143
             self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            while True:
+            la_ = self._interp.adaptivePredict(self._input,15,self._ctx)
+            if la_ == 1:
+                localctx = EDBSParser.WhileContext(self, localctx)
+                self.enterOuterAlt(localctx, 1)
+                self.state = 99
+                self.match(EDBSParser.REPEAT_KEYWORD)
+                self.state = 101
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+                if _la==56:
+                    self.state = 100
+                    self.match(EDBSParser.NEWLINE)
+
+
+                self.state = 103
+                self.statement()
+                self.state = 111
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+                while _la==4:
+                    self.state = 104
+                    self.match(EDBSParser.COMMA)
+                    self.state = 106
+                    self._errHandler.sync(self)
+                    _la = self._input.LA(1)
+                    if _la==56:
+                        self.state = 105
+                        self.match(EDBSParser.NEWLINE)
+
+
+                    self.state = 108
+                    self.statement()
+                    self.state = 113
+                    self._errHandler.sync(self)
+                    _la = self._input.LA(1)
+
+                self.state = 115
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+                if _la==56:
+                    self.state = 114
+                    self.match(EDBSParser.NEWLINE)
+
+
+                self.state = 117
+                self.match(EDBSParser.CONDITION_KEYWORD)
+                self.state = 118
+                self.bool_expr(0)
+                pass
+
+            elif la_ == 2:
+                localctx = EDBSParser.MutateContext(self, localctx)
+                self.enterOuterAlt(localctx, 2)
+                self.state = 120
+                self.match(EDBSParser.UPDATE_KEYWORD)
+                self.state = 121
+                self.match(EDBSParser.IDENTIFIER)
+                self.state = 122
+                self.match(EDBSParser.COLON)
                 self.state = 123
-                self.write_arg()
+                self.expr_op(0)
+                pass
+
+            elif la_ == 3:
+                localctx = EDBSParser.WriteContext(self, localctx)
+                self.enterOuterAlt(localctx, 3)
+                self.state = 124
+                self.match(EDBSParser.WRITE_KEYWORD)
                 self.state = 126 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if not (_la==52 or _la==53):
-                    break
+                while True:
+                    self.state = 125
+                    self.write_arg()
+                    self.state = 128 
+                    self._errHandler.sync(self)
+                    _la = self._input.LA(1)
+                    if not (_la==52 or _la==53):
+                        break
+
+                pass
+
+            elif la_ == 4:
+                localctx = EDBSParser.CalcContext(self, localctx)
+                self.enterOuterAlt(localctx, 4)
+                self.state = 130
+                self.match(EDBSParser.CALC_KEYWORD)
+                self.state = 131
+                self.match(EDBSParser.IDENTIFIER)
+                self.state = 132
+                self.match(EDBSParser.COLON)
+                self.state = 133
+                self.expr_op(0)
+                pass
+
+            elif la_ == 5:
+                localctx = EDBSParser.ReadContext(self, localctx)
+                self.enterOuterAlt(localctx, 5)
+                self.state = 134
+                self.match(EDBSParser.READ_KEYWORD)
+                self.state = 135
+                self.match(EDBSParser.IDENTIFIER)
+                self.state = 136
+                self.match(EDBSParser.COLON)
+                self.state = 137
+                self.match(EDBSParser.STRING)
+                pass
+
+            elif la_ == 6:
+                localctx = EDBSParser.ReadfileContext(self, localctx)
+                self.enterOuterAlt(localctx, 6)
+                self.state = 138
+                self.match(EDBSParser.READ_KEYWORD)
+                self.state = 139
+                self.match(EDBSParser.FILE_KEYWORD)
+                self.state = 140
+                self.match(EDBSParser.IDENTIFIER)
+                pass
+
+            elif la_ == 7:
+                localctx = EDBSParser.ReturnContext(self, localctx)
+                self.enterOuterAlt(localctx, 7)
+                self.state = 141
+                self.match(EDBSParser.EXIT_KEYWORD)
+                self.state = 142
+                self.match(EDBSParser.EXCLAMATION)
+                pass
+
 
         except RecognitionException as re:
             localctx.exception = re
@@ -1009,80 +1193,17 @@ class EDBSParser ( Parser ):
     def write_arg(self):
 
         localctx = EDBSParser.Write_argContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 18, self.RULE_write_arg)
+        self.enterRule(localctx, 16, self.RULE_write_arg)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 128
+            self.state = 145
             _la = self._input.LA(1)
             if not(_la==52 or _la==53):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
                 self.consume()
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class Calc_stmtContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def CALC_KEYWORD(self):
-            return self.getToken(EDBSParser.CALC_KEYWORD, 0)
-
-        def IDENTIFIER(self):
-            return self.getToken(EDBSParser.IDENTIFIER, 0)
-
-        def COLON(self):
-            return self.getToken(EDBSParser.COLON, 0)
-
-        def expr_op(self):
-            return self.getTypedRuleContext(EDBSParser.Expr_opContext,0)
-
-
-        def getRuleIndex(self):
-            return EDBSParser.RULE_calc_stmt
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterCalc_stmt" ):
-                listener.enterCalc_stmt(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitCalc_stmt" ):
-                listener.exitCalc_stmt(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCalc_stmt" ):
-                return visitor.visitCalc_stmt(self)
-            else:
-                return visitor.visitChildren(self)
-
-
-
-
-    def calc_stmt(self):
-
-        localctx = EDBSParser.Calc_stmtContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 20, self.RULE_calc_stmt)
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 130
-            self.match(EDBSParser.CALC_KEYWORD)
-            self.state = 131
-            self.match(EDBSParser.IDENTIFIER)
-            self.state = 132
-            self.match(EDBSParser.COLON)
-            self.state = 133
-            self.expr_op(0)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1552,12 +1673,12 @@ class EDBSParser ( Parser ):
         _parentState = self.state
         localctx = EDBSParser.Expr_opContext(self, self._ctx, _parentState)
         _prevctx = localctx
-        _startState = 22
-        self.enterRecursionRule(localctx, 22, self.RULE_expr_op, _p)
+        _startState = 18
+        self.enterRecursionRule(localctx, 18, self.RULE_expr_op, _p)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 162
+            self.state = 174
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [38]:
@@ -1565,60 +1686,60 @@ class EDBSParser ( Parser ):
                 self._ctx = localctx
                 _prevctx = localctx
 
-                self.state = 136
+                self.state = 148
                 self.match(EDBSParser.OPEN_PAREN)
-                self.state = 137
+                self.state = 149
                 self.expr_op(0)
-                self.state = 138
+                self.state = 150
                 self.match(EDBSParser.CLOSE_PAREN)
                 pass
             elif token in [23]:
                 localctx = EDBSParser.LenContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 140
+                self.state = 152
                 self.match(EDBSParser.LENGTH_KEYWORD)
-                self.state = 141
+                self.state = 153
                 self.match(EDBSParser.OF_KEYWORD)
-                self.state = 142
+                self.state = 154
                 self.expr_op(6)
                 pass
             elif token in [18]:
                 localctx = EDBSParser.Call_opContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 143
+                self.state = 155
                 self.match(EDBSParser.CALL_MODULE_KEYWORD)
-                self.state = 144
+                self.state = 156
                 self.match(EDBSParser.IDENTIFIER)
-                self.state = 145
+                self.state = 157
                 self.match(EDBSParser.MODULE_PARAM_KEYWORD)
-                self.state = 146
+                self.state = 158
                 self.actual_param_list()
                 pass
             elif token in [44, 45, 46, 47]:
                 localctx = EDBSParser.List_opContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 147
+                self.state = 159
                 self.list_command()
-                self.state = 149
+                self.state = 161
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if _la==24:
-                    self.state = 148
+                    self.state = 160
                     self.match(EDBSParser.OF_KEYWORD)
 
 
-                self.state = 151
+                self.state = 163
                 self.match(EDBSParser.IDENTIFIER)
-                self.state = 154
+                self.state = 166
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,13,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input,17,self._ctx)
                 if la_ == 1:
-                    self.state = 152
+                    self.state = 164
                     self.match(EDBSParser.LOP_RESET_IDX)
-                    self.state = 153
+                    self.state = 165
                     self.expr_op(0)
 
 
@@ -1627,13 +1748,13 @@ class EDBSParser ( Parser ):
                 localctx = EDBSParser.VarContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 156
+                self.state = 168
                 self.match(EDBSParser.IDENTIFIER)
-                self.state = 158
+                self.state = 170
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,14,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input,18,self._ctx)
                 if la_ == 1:
-                    self.state = 157
+                    self.state = 169
                     self.match(EDBSParser.PRIMED)
 
 
@@ -1642,139 +1763,139 @@ class EDBSParser ( Parser ):
                 localctx = EDBSParser.StrlitContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 160
+                self.state = 172
                 self.str_literal()
                 pass
             elif token in [54]:
                 localctx = EDBSParser.NolitContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 161
+                self.state = 173
                 self.match(EDBSParser.NUMBER)
                 pass
             else:
                 raise NoViableAltException(self)
 
             self._ctx.stop = self._input.LT(-1)
-            self.state = 190
+            self.state = 202
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,17,self._ctx)
+            _alt = self._interp.adaptivePredict(self._input,21,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     if self._parseListeners is not None:
                         self.triggerExitRuleEvent()
                     _prevctx = localctx
-                    self.state = 188
+                    self.state = 200
                     self._errHandler.sync(self)
-                    la_ = self._interp.adaptivePredict(self._input,16,self._ctx)
+                    la_ = self._interp.adaptivePredict(self._input,20,self._ctx)
                     if la_ == 1:
                         localctx = EDBSParser.MulContext(self, EDBSParser.Expr_opContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr_op)
-                        self.state = 164
+                        self.state = 176
                         if not self.precpred(self._ctx, 15):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 15)")
-                        self.state = 165
+                        self.state = 177
                         self.match(EDBSParser.OP_MUL)
-                        self.state = 166
+                        self.state = 178
                         self.expr_op(16)
                         pass
 
                     elif la_ == 2:
                         localctx = EDBSParser.DivContext(self, EDBSParser.Expr_opContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr_op)
-                        self.state = 167
+                        self.state = 179
                         if not self.precpred(self._ctx, 14):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 14)")
-                        self.state = 168
+                        self.state = 180
                         self.match(EDBSParser.OP_DIV)
-                        self.state = 169
+                        self.state = 181
                         self.expr_op(15)
                         pass
 
                     elif la_ == 3:
                         localctx = EDBSParser.AddContext(self, EDBSParser.Expr_opContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr_op)
-                        self.state = 170
+                        self.state = 182
                         if not self.precpred(self._ctx, 13):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 13)")
-                        self.state = 171
+                        self.state = 183
                         self.match(EDBSParser.OP_ADD)
-                        self.state = 172
+                        self.state = 184
                         self.expr_op(14)
                         pass
 
                     elif la_ == 4:
                         localctx = EDBSParser.SubContext(self, EDBSParser.Expr_opContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr_op)
-                        self.state = 173
+                        self.state = 185
                         if not self.precpred(self._ctx, 12):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 12)")
-                        self.state = 174
+                        self.state = 186
                         self.match(EDBSParser.OP_SUB)
-                        self.state = 175
+                        self.state = 187
                         self.expr_op(13)
                         pass
 
                     elif la_ == 5:
                         localctx = EDBSParser.ConcatContext(self, EDBSParser.Expr_opContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr_op)
-                        self.state = 176
+                        self.state = 188
                         if not self.precpred(self._ctx, 11):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 11)")
-                        self.state = 177
+                        self.state = 189
                         self.match(EDBSParser.SOP_CONCAT)
-                        self.state = 178
+                        self.state = 190
                         self.expr_op(12)
                         pass
 
                     elif la_ == 6:
                         localctx = EDBSParser.RepeatContext(self, EDBSParser.Expr_opContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr_op)
-                        self.state = 179
+                        self.state = 191
                         if not self.precpred(self._ctx, 10):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 10)")
-                        self.state = 180
+                        self.state = 192
                         self.match(EDBSParser.SOP_REPEAT)
-                        self.state = 181
+                        self.state = 193
                         self.expr_op(11)
                         pass
 
                     elif la_ == 7:
                         localctx = EDBSParser.SubstrContext(self, EDBSParser.Expr_opContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr_op)
-                        self.state = 182
+                        self.state = 194
                         if not self.precpred(self._ctx, 9):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 9)")
-                        self.state = 183
+                        self.state = 195
                         self.match(EDBSParser.SOP_SUBSTR)
-                        self.state = 184
+                        self.state = 196
                         self.expr_op(10)
                         pass
 
                     elif la_ == 8:
                         localctx = EDBSParser.SplitContext(self, EDBSParser.Expr_opContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr_op)
-                        self.state = 185
+                        self.state = 197
                         if not self.precpred(self._ctx, 8):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 8)")
-                        self.state = 186
+                        self.state = 198
                         self.match(EDBSParser.SOP_SPLIT)
-                        self.state = 187
+                        self.state = 199
                         self.expr_op(9)
                         pass
 
              
-                self.state = 192
+                self.state = 204
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,17,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input,21,self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -1782,6 +1903,272 @@ class EDBSParser ( Parser ):
             self._errHandler.recover(self, re)
         finally:
             self.unrollRecursionContexts(_parentctx)
+        return localctx
+
+
+    class Actual_param_listContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def actual_param(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(EDBSParser.Actual_paramContext)
+            else:
+                return self.getTypedRuleContext(EDBSParser.Actual_paramContext,i)
+
+
+        def COMMA(self, i:int=None):
+            if i is None:
+                return self.getTokens(EDBSParser.COMMA)
+            else:
+                return self.getToken(EDBSParser.COMMA, i)
+
+        def getRuleIndex(self):
+            return EDBSParser.RULE_actual_param_list
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterActual_param_list" ):
+                listener.enterActual_param_list(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitActual_param_list" ):
+                listener.exitActual_param_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitActual_param_list" ):
+                return visitor.visitActual_param_list(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def actual_param_list(self):
+
+        localctx = EDBSParser.Actual_param_listContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 20, self.RULE_actual_param_list)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 205
+            self.actual_param()
+            self.state = 210
+            self._errHandler.sync(self)
+            _alt = self._interp.adaptivePredict(self._input,22,self._ctx)
+            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+                if _alt==1:
+                    self.state = 206
+                    self.match(EDBSParser.COMMA)
+                    self.state = 207
+                    self.actual_param() 
+                self.state = 212
+                self._errHandler.sync(self)
+                _alt = self._interp.adaptivePredict(self._input,22,self._ctx)
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class Actual_paramContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def NUMBER(self):
+            return self.getToken(EDBSParser.NUMBER, 0)
+
+        def str_literal(self):
+            return self.getTypedRuleContext(EDBSParser.Str_literalContext,0)
+
+
+        def IDENTIFIER(self):
+            return self.getToken(EDBSParser.IDENTIFIER, 0)
+
+        def getRuleIndex(self):
+            return EDBSParser.RULE_actual_param
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterActual_param" ):
+                listener.enterActual_param(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitActual_param" ):
+                listener.exitActual_param(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitActual_param" ):
+                return visitor.visitActual_param(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def actual_param(self):
+
+        localctx = EDBSParser.Actual_paramContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 22, self.RULE_actual_param)
+        try:
+            self.state = 216
+            self._errHandler.sync(self)
+            token = self._input.LA(1)
+            if token in [54]:
+                self.enterOuterAlt(localctx, 1)
+                self.state = 213
+                self.match(EDBSParser.NUMBER)
+                pass
+            elif token in [49, 50, 51, 52]:
+                self.enterOuterAlt(localctx, 2)
+                self.state = 214
+                self.str_literal()
+                pass
+            elif token in [53]:
+                self.enterOuterAlt(localctx, 3)
+                self.state = 215
+                self.match(EDBSParser.IDENTIFIER)
+                pass
+            else:
+                raise NoViableAltException(self)
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class List_commandContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def LOP_NEXT(self):
+            return self.getToken(EDBSParser.LOP_NEXT, 0)
+
+        def LOP_FIND(self):
+            return self.getToken(EDBSParser.LOP_FIND, 0)
+
+        def LOP_BACK(self):
+            return self.getToken(EDBSParser.LOP_BACK, 0)
+
+        def LOP_RESET(self):
+            return self.getToken(EDBSParser.LOP_RESET, 0)
+
+        def getRuleIndex(self):
+            return EDBSParser.RULE_list_command
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterList_command" ):
+                listener.enterList_command(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitList_command" ):
+                listener.exitList_command(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitList_command" ):
+                return visitor.visitList_command(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def list_command(self):
+
+        localctx = EDBSParser.List_commandContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 24, self.RULE_list_command)
+        self._la = 0 # Token type
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 218
+            _la = self._input.LA(1)
+            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 263882790666240) != 0)):
+                self._errHandler.recoverInline(self)
+            else:
+                self._errHandler.reportMatch(self)
+                self.consume()
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class Str_literalContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def NULL_CHAR(self):
+            return self.getToken(EDBSParser.NULL_CHAR, 0)
+
+        def NEWLINE_CHAR(self):
+            return self.getToken(EDBSParser.NEWLINE_CHAR, 0)
+
+        def WHITESPACE_CHAR(self):
+            return self.getToken(EDBSParser.WHITESPACE_CHAR, 0)
+
+        def STRING(self):
+            return self.getToken(EDBSParser.STRING, 0)
+
+        def getRuleIndex(self):
+            return EDBSParser.RULE_str_literal
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterStr_literal" ):
+                listener.enterStr_literal(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitStr_literal" ):
+                listener.exitStr_literal(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitStr_literal" ):
+                return visitor.visitStr_literal(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def str_literal(self):
+
+        localctx = EDBSParser.Str_literalContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 26, self.RULE_str_literal)
+        self._la = 0 # Token type
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 220
+            _la = self._input.LA(1)
+            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 8444249301319680) != 0)):
+                self._errHandler.recoverInline(self)
+            else:
+                self._errHandler.reportMatch(self)
+                self.consume()
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
         return localctx
 
 
@@ -1913,117 +2300,81 @@ class EDBSParser ( Parser ):
                 return visitor.visitChildren(self)
 
 
-    class CondContext(Bool_exprContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a EDBSParser.Bool_exprContext
-            super().__init__(parser)
-            self.copyFrom(ctx)
-
-        def CONDITION_KEYWORD(self):
-            return self.getToken(EDBSParser.CONDITION_KEYWORD, 0)
-        def bool_expr(self):
-            return self.getTypedRuleContext(EDBSParser.Bool_exprContext,0)
-
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterCond" ):
-                listener.enterCond(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitCond" ):
-                listener.exitCond(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCond" ):
-                return visitor.visitCond(self)
-            else:
-                return visitor.visitChildren(self)
-
-
 
     def bool_expr(self, _p:int=0):
         _parentctx = self._ctx
         _parentState = self.state
         localctx = EDBSParser.Bool_exprContext(self, self._ctx, _parentState)
         _prevctx = localctx
-        _startState = 24
-        self.enterRecursionRule(localctx, 24, self.RULE_bool_expr, _p)
+        _startState = 28
+        self.enterRecursionRule(localctx, 28, self.RULE_bool_expr, _p)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 199
+            self.state = 226
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [9]:
-                localctx = EDBSParser.CondContext(self, localctx)
-                self._ctx = localctx
-                _prevctx = localctx
-
-                self.state = 194
-                self.match(EDBSParser.CONDITION_KEYWORD)
-                self.state = 195
-                self.bool_expr(5)
-                pass
-            elif token in [26]:
+            if token in [26]:
                 localctx = EDBSParser.NotContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 196
+
+                self.state = 223
                 self.match(EDBSParser.BOP_NOT)
-                self.state = 197
+                self.state = 224
                 self.bool_expr(4)
                 pass
             elif token in [18, 23, 38, 44, 45, 46, 47, 49, 50, 51, 52, 53, 54]:
                 localctx = EDBSParser.CompContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 198
+                self.state = 225
                 self.comparison()
                 pass
             else:
                 raise NoViableAltException(self)
 
             self._ctx.stop = self._input.LT(-1)
-            self.state = 209
+            self.state = 236
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,20,self._ctx)
+            _alt = self._interp.adaptivePredict(self._input,26,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     if self._parseListeners is not None:
                         self.triggerExitRuleEvent()
                     _prevctx = localctx
-                    self.state = 207
+                    self.state = 234
                     self._errHandler.sync(self)
-                    la_ = self._interp.adaptivePredict(self._input,19,self._ctx)
+                    la_ = self._interp.adaptivePredict(self._input,25,self._ctx)
                     if la_ == 1:
                         localctx = EDBSParser.AndContext(self, EDBSParser.Bool_exprContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_bool_expr)
-                        self.state = 201
+                        self.state = 228
                         if not self.precpred(self._ctx, 3):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 3)")
-                        self.state = 202
+                        self.state = 229
                         self.match(EDBSParser.BOP_AND)
-                        self.state = 203
+                        self.state = 230
                         self.bool_expr(4)
                         pass
 
                     elif la_ == 2:
                         localctx = EDBSParser.OrContext(self, EDBSParser.Bool_exprContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_bool_expr)
-                        self.state = 204
+                        self.state = 231
                         if not self.precpred(self._ctx, 2):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
-                        self.state = 205
+                        self.state = 232
                         self.match(EDBSParser.BOP_OR)
-                        self.state = 206
+                        self.state = 233
                         self.bool_expr(3)
                         pass
 
              
-                self.state = 211
+                self.state = 238
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,20,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input,26,self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -2031,148 +2382,6 @@ class EDBSParser ( Parser ):
             self._errHandler.recover(self, re)
         finally:
             self.unrollRecursionContexts(_parentctx)
-        return localctx
-
-
-    class Actual_param_listContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def actual_param(self, i:int=None):
-            if i is None:
-                return self.getTypedRuleContexts(EDBSParser.Actual_paramContext)
-            else:
-                return self.getTypedRuleContext(EDBSParser.Actual_paramContext,i)
-
-
-        def COMMA(self, i:int=None):
-            if i is None:
-                return self.getTokens(EDBSParser.COMMA)
-            else:
-                return self.getToken(EDBSParser.COMMA, i)
-
-        def getRuleIndex(self):
-            return EDBSParser.RULE_actual_param_list
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterActual_param_list" ):
-                listener.enterActual_param_list(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitActual_param_list" ):
-                listener.exitActual_param_list(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitActual_param_list" ):
-                return visitor.visitActual_param_list(self)
-            else:
-                return visitor.visitChildren(self)
-
-
-
-
-    def actual_param_list(self):
-
-        localctx = EDBSParser.Actual_param_listContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 26, self.RULE_actual_param_list)
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 212
-            self.actual_param()
-            self.state = 217
-            self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,21,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
-                    self.state = 213
-                    self.match(EDBSParser.COMMA)
-                    self.state = 214
-                    self.actual_param() 
-                self.state = 219
-                self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,21,self._ctx)
-
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class Actual_paramContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def NUMBER(self):
-            return self.getToken(EDBSParser.NUMBER, 0)
-
-        def str_literal(self):
-            return self.getTypedRuleContext(EDBSParser.Str_literalContext,0)
-
-
-        def IDENTIFIER(self):
-            return self.getToken(EDBSParser.IDENTIFIER, 0)
-
-        def getRuleIndex(self):
-            return EDBSParser.RULE_actual_param
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterActual_param" ):
-                listener.enterActual_param(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitActual_param" ):
-                listener.exitActual_param(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitActual_param" ):
-                return visitor.visitActual_param(self)
-            else:
-                return visitor.visitChildren(self)
-
-
-
-
-    def actual_param(self):
-
-        localctx = EDBSParser.Actual_paramContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 28, self.RULE_actual_param)
-        try:
-            self.state = 223
-            self._errHandler.sync(self)
-            token = self._input.LA(1)
-            if token in [54]:
-                self.enterOuterAlt(localctx, 1)
-                self.state = 220
-                self.match(EDBSParser.NUMBER)
-                pass
-            elif token in [49, 50, 51, 52]:
-                self.enterOuterAlt(localctx, 2)
-                self.state = 221
-                self.str_literal()
-                pass
-            elif token in [53]:
-                self.enterOuterAlt(localctx, 3)
-                self.state = 222
-                self.match(EDBSParser.IDENTIFIER)
-                pass
-            else:
-                raise NoViableAltException(self)
-
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
         return localctx
 
 
@@ -2232,491 +2441,17 @@ class EDBSParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 225
+            self.state = 239
             self.expr_op(0)
-            self.state = 226
+            self.state = 240
             _la = self._input.LA(1)
             if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 266287972352) != 0)):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
                 self.consume()
-            self.state = 227
+            self.state = 241
             self.expr_op(0)
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class Str_literalContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def NULL_CHAR(self):
-            return self.getToken(EDBSParser.NULL_CHAR, 0)
-
-        def NEWLINE_CHAR(self):
-            return self.getToken(EDBSParser.NEWLINE_CHAR, 0)
-
-        def WHITESPACE_CHAR(self):
-            return self.getToken(EDBSParser.WHITESPACE_CHAR, 0)
-
-        def STRING(self):
-            return self.getToken(EDBSParser.STRING, 0)
-
-        def getRuleIndex(self):
-            return EDBSParser.RULE_str_literal
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterStr_literal" ):
-                listener.enterStr_literal(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitStr_literal" ):
-                listener.exitStr_literal(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitStr_literal" ):
-                return visitor.visitStr_literal(self)
-            else:
-                return visitor.visitChildren(self)
-
-
-
-
-    def str_literal(self):
-
-        localctx = EDBSParser.Str_literalContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 32, self.RULE_str_literal)
-        self._la = 0 # Token type
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 229
-            _la = self._input.LA(1)
-            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 8444249301319680) != 0)):
-                self._errHandler.recoverInline(self)
-            else:
-                self._errHandler.reportMatch(self)
-                self.consume()
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class List_commandContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def LOP_NEXT(self):
-            return self.getToken(EDBSParser.LOP_NEXT, 0)
-
-        def LOP_FIND(self):
-            return self.getToken(EDBSParser.LOP_FIND, 0)
-
-        def LOP_BACK(self):
-            return self.getToken(EDBSParser.LOP_BACK, 0)
-
-        def LOP_RESET(self):
-            return self.getToken(EDBSParser.LOP_RESET, 0)
-
-        def getRuleIndex(self):
-            return EDBSParser.RULE_list_command
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterList_command" ):
-                listener.enterList_command(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitList_command" ):
-                listener.exitList_command(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitList_command" ):
-                return visitor.visitList_command(self)
-            else:
-                return visitor.visitChildren(self)
-
-
-
-
-    def list_command(self):
-
-        localctx = EDBSParser.List_commandContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 34, self.RULE_list_command)
-        self._la = 0 # Token type
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 231
-            _la = self._input.LA(1)
-            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 263882790666240) != 0)):
-                self._errHandler.recoverInline(self)
-            else:
-                self._errHandler.reportMatch(self)
-                self.consume()
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class While_stmtContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def REPEAT_KEYWORD(self):
-            return self.getToken(EDBSParser.REPEAT_KEYWORD, 0)
-
-        def statement(self, i:int=None):
-            if i is None:
-                return self.getTypedRuleContexts(EDBSParser.StatementContext)
-            else:
-                return self.getTypedRuleContext(EDBSParser.StatementContext,i)
-
-
-        def CONDITION_KEYWORD(self):
-            return self.getToken(EDBSParser.CONDITION_KEYWORD, 0)
-
-        def bool_expr(self):
-            return self.getTypedRuleContext(EDBSParser.Bool_exprContext,0)
-
-
-        def NEWLINE(self, i:int=None):
-            if i is None:
-                return self.getTokens(EDBSParser.NEWLINE)
-            else:
-                return self.getToken(EDBSParser.NEWLINE, i)
-
-        def COMMA(self, i:int=None):
-            if i is None:
-                return self.getTokens(EDBSParser.COMMA)
-            else:
-                return self.getToken(EDBSParser.COMMA, i)
-
-        def getRuleIndex(self):
-            return EDBSParser.RULE_while_stmt
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterWhile_stmt" ):
-                listener.enterWhile_stmt(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitWhile_stmt" ):
-                listener.exitWhile_stmt(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitWhile_stmt" ):
-                return visitor.visitWhile_stmt(self)
-            else:
-                return visitor.visitChildren(self)
-
-
-
-
-    def while_stmt(self):
-
-        localctx = EDBSParser.While_stmtContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 36, self.RULE_while_stmt)
-        self._la = 0 # Token type
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 233
-            self.match(EDBSParser.REPEAT_KEYWORD)
-            self.state = 235
-            self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            if _la==56:
-                self.state = 234
-                self.match(EDBSParser.NEWLINE)
-
-
-            self.state = 237
-            self.statement()
-            self.state = 245
-            self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            while _la==4:
-                self.state = 238
-                self.match(EDBSParser.COMMA)
-                self.state = 240
-                self._errHandler.sync(self)
-                _la = self._input.LA(1)
-                if _la==56:
-                    self.state = 239
-                    self.match(EDBSParser.NEWLINE)
-
-
-                self.state = 242
-                self.statement()
-                self.state = 247
-                self._errHandler.sync(self)
-                _la = self._input.LA(1)
-
-            self.state = 249
-            self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            if _la==56:
-                self.state = 248
-                self.match(EDBSParser.NEWLINE)
-
-
-            self.state = 251
-            self.match(EDBSParser.CONDITION_KEYWORD)
-            self.state = 252
-            self.bool_expr(0)
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class Mutate_stmtContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def UPDATE_KEYWORD(self):
-            return self.getToken(EDBSParser.UPDATE_KEYWORD, 0)
-
-        def IDENTIFIER(self):
-            return self.getToken(EDBSParser.IDENTIFIER, 0)
-
-        def COLON(self):
-            return self.getToken(EDBSParser.COLON, 0)
-
-        def expr_op(self):
-            return self.getTypedRuleContext(EDBSParser.Expr_opContext,0)
-
-
-        def getRuleIndex(self):
-            return EDBSParser.RULE_mutate_stmt
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterMutate_stmt" ):
-                listener.enterMutate_stmt(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitMutate_stmt" ):
-                listener.exitMutate_stmt(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitMutate_stmt" ):
-                return visitor.visitMutate_stmt(self)
-            else:
-                return visitor.visitChildren(self)
-
-
-
-
-    def mutate_stmt(self):
-
-        localctx = EDBSParser.Mutate_stmtContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 38, self.RULE_mutate_stmt)
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 254
-            self.match(EDBSParser.UPDATE_KEYWORD)
-            self.state = 255
-            self.match(EDBSParser.IDENTIFIER)
-            self.state = 256
-            self.match(EDBSParser.COLON)
-            self.state = 257
-            self.expr_op(0)
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class Read_assgnContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def READ_KEYWORD(self):
-            return self.getToken(EDBSParser.READ_KEYWORD, 0)
-
-        def IDENTIFIER(self):
-            return self.getToken(EDBSParser.IDENTIFIER, 0)
-
-        def COLON(self):
-            return self.getToken(EDBSParser.COLON, 0)
-
-        def STRING(self):
-            return self.getToken(EDBSParser.STRING, 0)
-
-        def getRuleIndex(self):
-            return EDBSParser.RULE_read_assgn
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterRead_assgn" ):
-                listener.enterRead_assgn(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitRead_assgn" ):
-                listener.exitRead_assgn(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitRead_assgn" ):
-                return visitor.visitRead_assgn(self)
-            else:
-                return visitor.visitChildren(self)
-
-
-
-
-    def read_assgn(self):
-
-        localctx = EDBSParser.Read_assgnContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 40, self.RULE_read_assgn)
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 259
-            self.match(EDBSParser.READ_KEYWORD)
-            self.state = 260
-            self.match(EDBSParser.IDENTIFIER)
-            self.state = 261
-            self.match(EDBSParser.COLON)
-            self.state = 262
-            self.match(EDBSParser.STRING)
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class Read_file_stmtContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def READ_KEYWORD(self):
-            return self.getToken(EDBSParser.READ_KEYWORD, 0)
-
-        def FILE_KEYWORD(self):
-            return self.getToken(EDBSParser.FILE_KEYWORD, 0)
-
-        def IDENTIFIER(self):
-            return self.getToken(EDBSParser.IDENTIFIER, 0)
-
-        def getRuleIndex(self):
-            return EDBSParser.RULE_read_file_stmt
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterRead_file_stmt" ):
-                listener.enterRead_file_stmt(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitRead_file_stmt" ):
-                listener.exitRead_file_stmt(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitRead_file_stmt" ):
-                return visitor.visitRead_file_stmt(self)
-            else:
-                return visitor.visitChildren(self)
-
-
-
-
-    def read_file_stmt(self):
-
-        localctx = EDBSParser.Read_file_stmtContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 42, self.RULE_read_file_stmt)
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 264
-            self.match(EDBSParser.READ_KEYWORD)
-            self.state = 265
-            self.match(EDBSParser.FILE_KEYWORD)
-            self.state = 266
-            self.match(EDBSParser.IDENTIFIER)
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class ReturnContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def EXIT_KEYWORD(self):
-            return self.getToken(EDBSParser.EXIT_KEYWORD, 0)
-
-        def EXCLAMATION(self):
-            return self.getToken(EDBSParser.EXCLAMATION, 0)
-
-        def getRuleIndex(self):
-            return EDBSParser.RULE_return
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterReturn" ):
-                listener.enterReturn(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitReturn" ):
-                listener.exitReturn(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReturn" ):
-                return visitor.visitReturn(self)
-            else:
-                return visitor.visitChildren(self)
-
-
-
-
-    def return_(self):
-
-        localctx = EDBSParser.ReturnContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 44, self.RULE_return)
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 268
-            self.match(EDBSParser.EXIT_KEYWORD)
-            self.state = 269
-            self.match(EDBSParser.EXCLAMATION)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -2730,8 +2465,8 @@ class EDBSParser ( Parser ):
     def sempred(self, localctx:RuleContext, ruleIndex:int, predIndex:int):
         if self._predicates == None:
             self._predicates = dict()
-        self._predicates[11] = self.expr_op_sempred
-        self._predicates[12] = self.bool_expr_sempred
+        self._predicates[9] = self.expr_op_sempred
+        self._predicates[14] = self.bool_expr_sempred
         pred = self._predicates.get(ruleIndex, None)
         if pred is None:
             raise Exception("No predicate with index:" + str(ruleIndex))
