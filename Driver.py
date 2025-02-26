@@ -1,5 +1,4 @@
 import sys
-from http.cookiejar import cut_port_re
 
 from antlr4 import *
 from edbs.EDBSLexer import EDBSLexer
@@ -21,7 +20,7 @@ class Module:
     def __init__(self, formal_params, result, body):
         self.formal_params = formal_params
         self.result = result
-        self.body = result
+        self.body = body
 
 class SymbolTable:
     def __init__(self, next = None):
@@ -29,10 +28,9 @@ class SymbolTable:
         self.modules = {}
         self.next = next
 
-    # variable from IDENTIFIER
     def add_var(self, name: str, value: float):
-        if name in self.storage:
-            raise VarAlreadyDefined(name)
+        # if name in self.storage:
+        #     raise VarAlreadyDefined(name)
         self.storage[name] = value
 
     def get_var(self, name: str):
@@ -88,7 +86,7 @@ class InterpreterVisitor(EDBSVisitor):
         self.symbol_table = symbol_table
 
     # SKRIV «Hels på deg verda!».
-    def visitWrite_stmt(self, ctx: EDBSParser.Write_stmtContext):
+    def visitWrite(self, ctx: EDBSParser.WriteContext):
         for c in ctx.children:
             self.visit(c)
         print()
@@ -107,28 +105,28 @@ class InterpreterVisitor(EDBSVisitor):
             print(str(string_token)[1:-1], end=" ")
 
     # LES beløp: «Tast inn lånebeløp».
-    def visitRead_assgn(self, ctx:EDBSParser.Read_assgnContext):
+    def visitRead(self, ctx:EDBSParser.ReadContext):
         prompt = str(ctx.STRING())[1:-1]
         value = float(input(f"{prompt}: ").replace(".", "").replace(",", "."))
         name = str(ctx.IDENTIFIER())
         self.symbol_table.add_var(name, value)
 
     # REKN totalt-betalt: nedbetaling * 12 * år.
-    def visitCalc_stmt(self, ctx:EDBSParser.Calc_stmtContext):
+    def visitCalc(self, ctx:EDBSParser.CalcContext):
         name = str(ctx.IDENTIFIER())
         value = self.visit(ctx.expr_op())
         self.symbol_table.add_var(name,value)
 
     # OPPDATER totalt-avdrag: totalt-avdrag' + avdrag,
     # OPPDATER beløp: ny-beløp,
-    def visitMutate_stmt(self, ctx:EDBSParser.Mutate_stmtContext):
+    def visitMutate(self, ctx:EDBSParser.MutateContext):
         name = str(ctx.IDENTIFIER())
         if not self.symbol_table.is_defined(name):
             self.symbol_table.add_var(name, 0.0)
         value = self.visit(ctx.expr_op())
         self.symbol_table.mutate_var(name, value)
 
-    def visitWhile_stmt(self, ctx:EDBSParser.While_stmtContext):
+    def visitWhile(self, ctx:EDBSParser.WhileContext):
         is_true = self.visit(ctx.bool_expr())
         self.symbol_table = SymbolTable(self.symbol_table)
         while is_true:
@@ -139,7 +137,7 @@ class InterpreterVisitor(EDBSVisitor):
 
     # module
     def visitModule_def(self, ctx:EDBSParser.Module_defContext):
-        name = str(ctx.children)
+        name = str(ctx.IDENTIFIER())
         params = self.visit(ctx.input_params())
         result = self.visit(ctx.output_params())
         ctx.output_params()
@@ -221,6 +219,34 @@ class InterpreterVisitor(EDBSVisitor):
 
     def visitList_op(self, ctx:EDBSParser.List_opContext):
         return None # TODO: error handling
+
+    # comp
+    def visitNot(self, ctx:EDBSParser.NotContext):
+        return not self.visit(ctx.bool_expr())
+
+    def visitAnd(self, ctx:EDBSParser.AndContext):
+        return self.visit(ctx.getChild(0)) and self.visit(ctx.getChild(2))
+
+    def visitOr(self, ctx:EDBSParser.OrContext):
+        return self.visit(ctx.getChild(0)) or self.visit(ctx.getChild(2))
+
+    def visitComp(self, ctx:EDBSParser.CompContext):
+        return self.visit(ctx.comparison())
+
+    def visitComparison(self, ctx:EDBSParser.ComparisonContext):
+        lhs = self.visit(ctx.getChild(0))
+        rhs = self.visit(ctx.getChild(ctx.getChildCount() - 1))
+        if ctx.COMP_EQL() is not None:
+            return lhs == rhs
+        elif ctx.COMP_LT() is not None:
+            return lhs < rhs
+        elif ctx.COMP_LEQ() is not None:
+            return lhs <= rhs
+        elif ctx.COMP_GT() is not None:
+            return lhs > rhs
+        elif ctx.COMP_GEQ() is not None:
+            return lhs >= rhs
+
 
 def main():
     # input_stream = FileStream("./Example code/hello.edbs", encoding="utf-8")

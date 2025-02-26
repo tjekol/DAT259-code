@@ -17,13 +17,16 @@ param_list : IDENTIFIER (COMMA IDENTIFIER)*;
 
 main_stmt : statement PERIOD NEWLINE;
 
-statement : while_stmt | mutate_stmt | write_stmt | read_assgn  | calc_stmt | read_file_stmt | return;
-
-write_stmt : WRITE_KEYWORD write_arg+;
+statement : REPEAT_KEYWORD NEWLINE? statement (COMMA NEWLINE? statement)* NEWLINE? CONDITION_KEYWORD bool_expr # while
+    | UPDATE_KEYWORD IDENTIFIER COLON expr_op # mutate
+    | WRITE_KEYWORD write_arg+ # write
+    | CALC_KEYWORD IDENTIFIER COLON expr_op # calc
+    | READ_KEYWORD IDENTIFIER COLON STRING # read
+    | READ_KEYWORD FILE_KEYWORD IDENTIFIER # readfile
+    | EXIT_KEYWORD EXCLAMATION # return
+    ;
 
 write_arg : STRING | IDENTIFIER;
-
-calc_stmt : CALC_KEYWORD IDENTIFIER COLON expr_op;
 
 expr_op : expr_op OP_MUL expr_op # mul
     | expr_op OP_DIV expr_op # div
@@ -42,29 +45,18 @@ expr_op : expr_op OP_MUL expr_op # mul
     | NUMBER # nolit
     ;
 
-bool_expr : CONDITION_KEYWORD bool_expr # cond
-    | BOP_NOT bool_expr # not
+actual_param_list : actual_param (COMMA actual_param)*;
+
+actual_param : NUMBER | str_literal | IDENTIFIER;
+
+list_command : LOP_NEXT | LOP_FIND | LOP_BACK | LOP_RESET;
+
+str_literal : NULL_CHAR | NEWLINE_CHAR | WHITESPACE_CHAR | STRING;
+
+bool_expr : BOP_NOT bool_expr # not
     | bool_expr BOP_AND bool_expr # and
     | bool_expr BOP_OR bool_expr # or
     | comparison # comp
     ;
 
-actual_param_list : actual_param (COMMA actual_param)*;
-
-actual_param : NUMBER | str_literal | IDENTIFIER;
-
 comparison : expr_op (COMP_EQL | COMP_LT | COMP_LEQ | COMP_GT | COMP_GEQ) expr_op;
-
-str_literal : NULL_CHAR | NEWLINE_CHAR | WHITESPACE_CHAR | STRING;
-
-list_command : LOP_NEXT | LOP_FIND | LOP_BACK | LOP_RESET;
-
-while_stmt : REPEAT_KEYWORD NEWLINE? statement (COMMA NEWLINE? statement)* NEWLINE? CONDITION_KEYWORD bool_expr;
-
-mutate_stmt : UPDATE_KEYWORD IDENTIFIER COLON expr_op;
-
-read_assgn : READ_KEYWORD IDENTIFIER COLON STRING;
-
-read_file_stmt : READ_KEYWORD FILE_KEYWORD IDENTIFIER;
-
-return : EXIT_KEYWORD EXCLAMATION;

@@ -71,21 +71,66 @@ class EDBSListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by EDBSParser#statement.
-    def enterStatement(self, ctx:EDBSParser.StatementContext):
+    # Enter a parse tree produced by EDBSParser#while.
+    def enterWhile(self, ctx:EDBSParser.WhileContext):
         pass
 
-    # Exit a parse tree produced by EDBSParser#statement.
-    def exitStatement(self, ctx:EDBSParser.StatementContext):
+    # Exit a parse tree produced by EDBSParser#while.
+    def exitWhile(self, ctx:EDBSParser.WhileContext):
         pass
 
 
-    # Enter a parse tree produced by EDBSParser#write_stmt.
-    def enterWrite_stmt(self, ctx:EDBSParser.Write_stmtContext):
+    # Enter a parse tree produced by EDBSParser#mutate.
+    def enterMutate(self, ctx:EDBSParser.MutateContext):
         pass
 
-    # Exit a parse tree produced by EDBSParser#write_stmt.
-    def exitWrite_stmt(self, ctx:EDBSParser.Write_stmtContext):
+    # Exit a parse tree produced by EDBSParser#mutate.
+    def exitMutate(self, ctx:EDBSParser.MutateContext):
+        pass
+
+
+    # Enter a parse tree produced by EDBSParser#write.
+    def enterWrite(self, ctx:EDBSParser.WriteContext):
+        pass
+
+    # Exit a parse tree produced by EDBSParser#write.
+    def exitWrite(self, ctx:EDBSParser.WriteContext):
+        pass
+
+
+    # Enter a parse tree produced by EDBSParser#calc.
+    def enterCalc(self, ctx:EDBSParser.CalcContext):
+        pass
+
+    # Exit a parse tree produced by EDBSParser#calc.
+    def exitCalc(self, ctx:EDBSParser.CalcContext):
+        pass
+
+
+    # Enter a parse tree produced by EDBSParser#read.
+    def enterRead(self, ctx:EDBSParser.ReadContext):
+        pass
+
+    # Exit a parse tree produced by EDBSParser#read.
+    def exitRead(self, ctx:EDBSParser.ReadContext):
+        pass
+
+
+    # Enter a parse tree produced by EDBSParser#readfile.
+    def enterReadfile(self, ctx:EDBSParser.ReadfileContext):
+        pass
+
+    # Exit a parse tree produced by EDBSParser#readfile.
+    def exitReadfile(self, ctx:EDBSParser.ReadfileContext):
+        pass
+
+
+    # Enter a parse tree produced by EDBSParser#return.
+    def enterReturn(self, ctx:EDBSParser.ReturnContext):
+        pass
+
+    # Exit a parse tree produced by EDBSParser#return.
+    def exitReturn(self, ctx:EDBSParser.ReturnContext):
         pass
 
 
@@ -95,15 +140,6 @@ class EDBSListener(ParseTreeListener):
 
     # Exit a parse tree produced by EDBSParser#write_arg.
     def exitWrite_arg(self, ctx:EDBSParser.Write_argContext):
-        pass
-
-
-    # Enter a parse tree produced by EDBSParser#calc_stmt.
-    def enterCalc_stmt(self, ctx:EDBSParser.Calc_stmtContext):
-        pass
-
-    # Exit a parse tree produced by EDBSParser#calc_stmt.
-    def exitCalc_stmt(self, ctx:EDBSParser.Calc_stmtContext):
         pass
 
 
@@ -242,6 +278,42 @@ class EDBSListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by EDBSParser#actual_param_list.
+    def enterActual_param_list(self, ctx:EDBSParser.Actual_param_listContext):
+        pass
+
+    # Exit a parse tree produced by EDBSParser#actual_param_list.
+    def exitActual_param_list(self, ctx:EDBSParser.Actual_param_listContext):
+        pass
+
+
+    # Enter a parse tree produced by EDBSParser#actual_param.
+    def enterActual_param(self, ctx:EDBSParser.Actual_paramContext):
+        pass
+
+    # Exit a parse tree produced by EDBSParser#actual_param.
+    def exitActual_param(self, ctx:EDBSParser.Actual_paramContext):
+        pass
+
+
+    # Enter a parse tree produced by EDBSParser#list_command.
+    def enterList_command(self, ctx:EDBSParser.List_commandContext):
+        pass
+
+    # Exit a parse tree produced by EDBSParser#list_command.
+    def exitList_command(self, ctx:EDBSParser.List_commandContext):
+        pass
+
+
+    # Enter a parse tree produced by EDBSParser#str_literal.
+    def enterStr_literal(self, ctx:EDBSParser.Str_literalContext):
+        pass
+
+    # Exit a parse tree produced by EDBSParser#str_literal.
+    def exitStr_literal(self, ctx:EDBSParser.Str_literalContext):
+        pass
+
+
     # Enter a parse tree produced by EDBSParser#comp.
     def enterComp(self, ctx:EDBSParser.CompContext):
         pass
@@ -278,102 +350,12 @@ class EDBSListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by EDBSParser#cond.
-    def enterCond(self, ctx:EDBSParser.CondContext):
-        pass
-
-    # Exit a parse tree produced by EDBSParser#cond.
-    def exitCond(self, ctx:EDBSParser.CondContext):
-        pass
-
-
-    # Enter a parse tree produced by EDBSParser#actual_param_list.
-    def enterActual_param_list(self, ctx:EDBSParser.Actual_param_listContext):
-        pass
-
-    # Exit a parse tree produced by EDBSParser#actual_param_list.
-    def exitActual_param_list(self, ctx:EDBSParser.Actual_param_listContext):
-        pass
-
-
-    # Enter a parse tree produced by EDBSParser#actual_param.
-    def enterActual_param(self, ctx:EDBSParser.Actual_paramContext):
-        pass
-
-    # Exit a parse tree produced by EDBSParser#actual_param.
-    def exitActual_param(self, ctx:EDBSParser.Actual_paramContext):
-        pass
-
-
     # Enter a parse tree produced by EDBSParser#comparison.
     def enterComparison(self, ctx:EDBSParser.ComparisonContext):
         pass
 
     # Exit a parse tree produced by EDBSParser#comparison.
     def exitComparison(self, ctx:EDBSParser.ComparisonContext):
-        pass
-
-
-    # Enter a parse tree produced by EDBSParser#str_literal.
-    def enterStr_literal(self, ctx:EDBSParser.Str_literalContext):
-        pass
-
-    # Exit a parse tree produced by EDBSParser#str_literal.
-    def exitStr_literal(self, ctx:EDBSParser.Str_literalContext):
-        pass
-
-
-    # Enter a parse tree produced by EDBSParser#list_command.
-    def enterList_command(self, ctx:EDBSParser.List_commandContext):
-        pass
-
-    # Exit a parse tree produced by EDBSParser#list_command.
-    def exitList_command(self, ctx:EDBSParser.List_commandContext):
-        pass
-
-
-    # Enter a parse tree produced by EDBSParser#while_stmt.
-    def enterWhile_stmt(self, ctx:EDBSParser.While_stmtContext):
-        pass
-
-    # Exit a parse tree produced by EDBSParser#while_stmt.
-    def exitWhile_stmt(self, ctx:EDBSParser.While_stmtContext):
-        pass
-
-
-    # Enter a parse tree produced by EDBSParser#mutate_stmt.
-    def enterMutate_stmt(self, ctx:EDBSParser.Mutate_stmtContext):
-        pass
-
-    # Exit a parse tree produced by EDBSParser#mutate_stmt.
-    def exitMutate_stmt(self, ctx:EDBSParser.Mutate_stmtContext):
-        pass
-
-
-    # Enter a parse tree produced by EDBSParser#read_assgn.
-    def enterRead_assgn(self, ctx:EDBSParser.Read_assgnContext):
-        pass
-
-    # Exit a parse tree produced by EDBSParser#read_assgn.
-    def exitRead_assgn(self, ctx:EDBSParser.Read_assgnContext):
-        pass
-
-
-    # Enter a parse tree produced by EDBSParser#read_file_stmt.
-    def enterRead_file_stmt(self, ctx:EDBSParser.Read_file_stmtContext):
-        pass
-
-    # Exit a parse tree produced by EDBSParser#read_file_stmt.
-    def exitRead_file_stmt(self, ctx:EDBSParser.Read_file_stmtContext):
-        pass
-
-
-    # Enter a parse tree produced by EDBSParser#return.
-    def enterReturn(self, ctx:EDBSParser.ReturnContext):
-        pass
-
-    # Exit a parse tree produced by EDBSParser#return.
-    def exitReturn(self, ctx:EDBSParser.ReturnContext):
         pass
 
 

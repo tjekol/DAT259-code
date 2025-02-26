@@ -44,23 +44,43 @@ class EDBSVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by EDBSParser#statement.
-    def visitStatement(self, ctx:EDBSParser.StatementContext):
+    # Visit a parse tree produced by EDBSParser#while.
+    def visitWhile(self, ctx:EDBSParser.WhileContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by EDBSParser#write_stmt.
-    def visitWrite_stmt(self, ctx:EDBSParser.Write_stmtContext):
+    # Visit a parse tree produced by EDBSParser#mutate.
+    def visitMutate(self, ctx:EDBSParser.MutateContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by EDBSParser#write.
+    def visitWrite(self, ctx:EDBSParser.WriteContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by EDBSParser#calc.
+    def visitCalc(self, ctx:EDBSParser.CalcContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by EDBSParser#read.
+    def visitRead(self, ctx:EDBSParser.ReadContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by EDBSParser#readfile.
+    def visitReadfile(self, ctx:EDBSParser.ReadfileContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by EDBSParser#return.
+    def visitReturn(self, ctx:EDBSParser.ReturnContext):
         return self.visitChildren(ctx)
 
 
     # Visit a parse tree produced by EDBSParser#write_arg.
     def visitWrite_arg(self, ctx:EDBSParser.Write_argContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by EDBSParser#calc_stmt.
-    def visitCalc_stmt(self, ctx:EDBSParser.Calc_stmtContext):
         return self.visitChildren(ctx)
 
 
@@ -139,6 +159,26 @@ class EDBSVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by EDBSParser#actual_param_list.
+    def visitActual_param_list(self, ctx:EDBSParser.Actual_param_listContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by EDBSParser#actual_param.
+    def visitActual_param(self, ctx:EDBSParser.Actual_paramContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by EDBSParser#list_command.
+    def visitList_command(self, ctx:EDBSParser.List_commandContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by EDBSParser#str_literal.
+    def visitStr_literal(self, ctx:EDBSParser.Str_literalContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by EDBSParser#comp.
     def visitComp(self, ctx:EDBSParser.CompContext):
         return self.visitChildren(ctx)
@@ -159,58 +199,8 @@ class EDBSVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by EDBSParser#cond.
-    def visitCond(self, ctx:EDBSParser.CondContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by EDBSParser#actual_param_list.
-    def visitActual_param_list(self, ctx:EDBSParser.Actual_param_listContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by EDBSParser#actual_param.
-    def visitActual_param(self, ctx:EDBSParser.Actual_paramContext):
-        return self.visitChildren(ctx)
-
-
     # Visit a parse tree produced by EDBSParser#comparison.
     def visitComparison(self, ctx:EDBSParser.ComparisonContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by EDBSParser#str_literal.
-    def visitStr_literal(self, ctx:EDBSParser.Str_literalContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by EDBSParser#list_command.
-    def visitList_command(self, ctx:EDBSParser.List_commandContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by EDBSParser#while_stmt.
-    def visitWhile_stmt(self, ctx:EDBSParser.While_stmtContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by EDBSParser#mutate_stmt.
-    def visitMutate_stmt(self, ctx:EDBSParser.Mutate_stmtContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by EDBSParser#read_assgn.
-    def visitRead_assgn(self, ctx:EDBSParser.Read_assgnContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by EDBSParser#read_file_stmt.
-    def visitRead_file_stmt(self, ctx:EDBSParser.Read_file_stmtContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by EDBSParser#return.
-    def visitReturn(self, ctx:EDBSParser.ReturnContext):
         return self.visitChildren(ctx)
 
 
