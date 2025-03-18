@@ -3,22 +3,21 @@ target datalayout = "e-m:o-i64:64-i128:128-n32:64-S128"
 target triple = "arm64-apple-macosx15.0.0"
 
 define i32 @factorial(i32 %n) {
-  %ac = i32 0
-  %counter = i32 1
-  %end icmp eq %counter, %n
+  %c = icmp eq i32 %n, 0
 
-  br %end
+  br i1 %c, label %base_case, label %recur
 
-  loop_body:
-    alloca
+  base_case:
+    ret i32 1
 
-  %s = sub i32 %a, 1
-  %m = mul i32 %a, %s
-  ret i32 %m
+  recur:
+    %s = sub i32 %n, 1
+    %rr = call i32 @factorial(i32 %s)
+    %res = mul i32 %n, %rr
+    ret i32 %res
 }
 
 define i32 @main(i32 %0, ptr %1) {
   %result = call i32 @factorial(i32 5)
   ret i32 %result
 }
-
